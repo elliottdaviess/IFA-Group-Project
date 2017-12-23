@@ -1,0 +1,166 @@
+{%extends 'gen_style.html'%}
+
+{% block mainBlock%}
+<!-- Title providing text in window tab -->
+<title>Health</title>
+<!-- Container holding page content -->
+    <div class="container">
+
+        <div class="row wow slideInLeft">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                     <h2><i>Health Form</i></h2> <!-- Title providing text in window tab -->
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in bshadow" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                  <!-- Health form -->
+                  <form id="peopleHealth" method = "post">
+                  <!-- Field for health form -->
+                  <div class="form-group col-md-6">
+                  <label for="formGroupExampleInput">How would you rate your health?</label>
+                  <select class="form-control" name="health_state" id="health_state" Required>
+                    <option selected="selected" disabled="true" value="">Please Select</option>
+                    <option value="one">Good</option>
+                    <option value="two">Fair</option>
+                    <option value="three">Poor</option>
+                  </select>
+                </div>
+                <!-- Field for health form -->
+                <div class="form-group col-md-6">
+                  <label for="formGroupExampleInput">Are you a smoker?</label>
+                  <select class="form-control" name="smoker" id="smoker" Required>
+                    <option selected="selected" disabled="true" value="">Please Select</option>
+                    <option value="one">Yes</option>
+                    <option value="two">No</option>
+                  </select>
+                </div>
+                <!-- Field for health form if the field beforehand was selected as yes -->
+                <div id="yes_smoker" style="display:none;" class="form-group col-md-6">
+                  <label>How many cigarettes do you smoke per day?</label>
+                  <input class="form-control" type="number" name="cigarette_number" id="cigarette_number" placeholder="How many?"/>
+                </div>
+                <!-- Field for health form -->
+                <div class="form-group col-md-6">
+                  <label for="formGroupExampleInput">Are you a drinker?</label>
+                  <select class="form-control" name="drinker" id="drinker" Required>
+                    <option selected="selected" disabled="true" value="">Please Select</option>
+                    <option value="one">Yes</option>
+                    <option value="two">No</option>
+                  </select>
+                </div>
+                <!-- Field for health form if the field beforehand was selected as yes -->
+                <div id="yes_drinker" style="display:none;" class="form-group col-md-6">
+                  <label>How many units do you drink per week?</label>
+                  <input class="form-control" type="number" name="drinking_unit" id="drinking_unit" placeholder="How many?"/>
+                </div>
+                <!-- Field for health form -->
+                <div class="form-group col-md-6">
+                  <label id="height" for="formGroupExampleInput">How tall are you?</label>
+                  <input class="form-control" type="text" name="height_feet_inches" id="height_feet_inches" placeholder='Feet " Inches' Required </input>
+                </div>
+                <!-- Field for health form -->
+                <div class="form-group col-md-6">
+                  <label id="weight" for="formGroupExampleInput">How much do you weigh?</label>
+                  <input class="form-control" type="text" name="specify_st_lb" id="specify_st_lb" placeholder="st  lb" Required </input>
+                  <br>
+                  <input class="form-control" type="text" name="specify_kg" id="specify_kg" placeholder="kg" Required </input>
+                </div>
+                <!-- Field for health form -->
+                <div class="form-group col-md-6">
+                  <label for="formGroupExampleInput">Are you involved in any hazardous pastimes,
+                (e.g. sky diving, rock climbing, BASE jumping, etc?)</label>
+                  <select class="form-control" name="hazard_pastime" id="hazard_pastime" Required>
+                    <option selected="selected" disabled="true" value="">Please Select</option>
+                    <option value="one">Yes</option>
+                    <option value="two">No</option>
+                  </select>
+                </div>
+                  <!-- Field for health form if the field beforehand was selected as yes -->
+                <div id="yes_pastime" style="display:none;" class="form-group col-md-6">
+                  <label>Specify what pastimes you engage in:</label>
+                  <input class="form-control" type="text" name="specify_hazard" id="specify_hazard" placeholder="Please enter your hazardous pastime activities"/>
+                </div>
+
+                <br>
+                <!-- Field for health form -->
+                <div class="form-group col-md-6">
+                  <label for="formGroupExampleInput">Are you aware of any health conditions that might affect current
+                    or future financial advice and insurance considerations?</b></label>
+                  <select class="form-control" name="health_issues" id="health_issues" Required>
+                    <option selected="selected" disabled="true" value="">Please Select</option>
+                    <option value="one">Yes</option>
+                    <option value="two">No</option>
+                  </select>
+                </div>
+                  <!-- Field for health form if the field beforehand was selected as yes -->
+                <div id="yes_issues" style="display:none;" class="form-group col-md-6">
+                  <label>Please state the health condition(s) that you are aware of:</label>
+                  <input class="form-control" type="text" name="specify_health_issues" id="specify_health_issues" placeholder="please enter health issue(s)"/>
+                </div>
+                  <!-- Buttons to save the data to the database-->
+                  <div class="col-xs-12">
+                    <button class="btn btn-danger col-md-2 col-md-offset-5"><span class="glyphicon glyphicon-trash"></span> Cancel</button>
+                    <button class="btn btn-success col-md-2 col-md-offset-"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+                  </div>
+
+            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                <script>
+                $('#health_issues').on('change',function(){ // function for health conditions
+                    if( $(this).val()==="one"){
+                    $("#yes_issues").show() // shows fields to specify health condition(s) if 'yes' is selected
+                    }
+                    else{
+                    $("#yes_issues").hide() // hides fields to specify health condition(s)
+                    }
+                });
+                </script>
+
+                <script>
+                $('#hazard_pastime').on('change',function(){ // function for hazardous activities
+                    if( $(this).val()==="one"){
+                    $("#yes_pastime").show() // shows fields to specify hazardous activities if 'yes' is selected
+                    }
+                    else{
+                    $("#yes_pastime").hide() // hides fields to specify hazardous activites
+                    }
+                });
+                </script>
+
+                <script>
+                $('#smoker').on('change',function(){ // function  for cigarettes smoked
+                    if( $(this).val()==="one"){
+                    $("#yes_smoker").show() // shows field to specify number of cigarettes smoked
+                    }
+                    else{
+                    $("#yes_smoker").hide() // hides fields to specify number of cigarettes smoked
+                    }
+                });
+                </script>
+
+                <script>
+                $('#drinker').on('change',function(){ // function for drinking habits
+                    if( $(this).val()==="one"){
+                    $("#yes_drinker").show() // shows fields to specify amount drunk per week
+                    }
+                    else{
+                    $("#yes_drinker").hide() // hides field if 'no'
+                    }
+                });
+              </script>
+
+              <script>
+                new WOW().init();
+              </script>
+
+    {%endblock%}

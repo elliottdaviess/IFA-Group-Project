@@ -1,0 +1,229 @@
+{%extends 'gen_style.html'%}
+
+{% block mainBlock%}
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 style="text-align: center;">Your Reports</h1>
+
+                <button type="button" style="margin-top:10px;" class=" wow slideInLeft btn btn-lg btn-warning col-md-5 col-xs-12" data-toggle="modal" data-target="#myModal"><span class=" glyphicon glyphicon-modal-window"></span> Income VS Expenditure</button> <!-- Trigger the modal with this button -->
+
+                <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Income VS Expenditure</h4>
+                      </div>
+<div class="modal-body">
+                <div id="container"></div>
+</div>
+              </div>
+
+                        </div>
+
+                    </div>
+                    <button type="button" style="margin-top:10px;" class="wow slideInRight btn btn-lg btn-primary col-md-offset-2 col-md-5 col-xs-12" data-toggle="modal" data-target="#myModal2"><span class=" glyphicon glyphicon-modal-window"></span> Income Breakdown</button> <!-- Trigger the modal with this button -->
+
+                    <div class="modal fade" id="myModal2" role="dialog">
+                      <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Income Breakdown</h4>
+                          </div>
+<div class="modal-body">
+                    <div id="Stat2" ></div>
+</div>
+                  </div>
+
+                            </div>
+
+                        </div>
+                        <button type="button" class=" wow slideInUp btn btn-lg btn-danger col-md-12 col-xs-12" style="margin-top:10px;" data-toggle="modal" data-target="#myModal3"><span class=" glyphicon glyphicon-modal-window"></span> Expenditure Breakdown</button> <!-- Trigger the modal with this button -->
+
+                        <div class="modal fade" id="myModal3" role="dialog">
+                          <div class="modal-dialog modal-lg">
+                              <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Expenditure Breakdown</h4>
+                              </div>
+<div class="modal-body">
+                        <div id="Stat3"  ></div>
+</div>
+                      </div>
+
+                                </div>
+
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                <script src="https://code.highcharts.com/highcharts.js"></script>
+                <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script>
+
+
+               $(function () {
+
+                   $(document).ready(function () {
+
+                       // Build the chart
+                       Highcharts.chart('container', {
+                           chart: {
+                               plotBackgroundColor: null,
+                               plotBorderWidth: null,
+                               plotShadow: false,
+                               type: 'pie'
+                           },
+                           title: {
+                               text: 'Income vs Expenditure'
+                           },
+                           tooltip: {
+                               pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                           },
+                           plotOptions: {
+                               pie: {
+                                   allowPointSelect: true,
+                                   cursor: 'pointer',
+                                   dataLabels: {
+                                       enabled: true
+                                   },
+                                   showInLegend: true
+                               }
+                           },
+                           series: [{
+
+                               colorByPoint: true,
+                               data: [{
+                                   name: 'Income',
+                                   y: 79
+                               }, {
+                                   name: 'Expenditure',
+                                   y: 21,
+                                   sliced: true,
+                                   selected: true
+                               }]
+                           }]
+                       });
+
+                   });
+               });
+
+               $(function () {
+
+                   $(document).ready(function () {
+
+                       // Build the chart
+                       Highcharts.chart('Stat2', {
+                           chart: {
+                               plotBackgroundColor: null,
+                               plotBorderWidth: null,
+                               plotShadow: false,
+                               type: 'pie'
+                           },
+                           title: {
+                               text: 'Breakdown of earnings'
+                           },
+                           tooltip: {
+                               pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                           },
+                           plotOptions: {
+                               pie: {
+                                   allowPointSelect: true,
+                                   cursor: 'pointer',
+                                   dataLabels: {
+                                       enabled: false
+                                   },
+                                   showInLegend: true
+                               }
+                           },
+                           series: [{
+                               name: '',
+                               colorByPoint: true,
+                               data: [{
+                                   name: 'Wages',
+                                   y: 80
+                               }, {
+                                   name: 'Pension',
+                                   y: 5,
+                                   sliced: true,
+                                   selected: true
+                               }, {
+                                   name: 'Other Income',
+                                   y: 15
+                               }
+                             ]
+                           }]
+                       });
+
+                   });
+               });
+
+               $(function () {
+
+                   $(document).ready(function () {
+
+                       // Build the chart
+                       Highcharts.chart('Stat3', {
+                           chart: {
+                               plotBackgroundColor: null,
+                               plotBorderWidth: null,
+                               plotShadow: false,
+                               type: 'pie'
+                           },
+                           title: {
+                               text: 'Expenditure Breakdown'
+                           },
+                           tooltip: {
+                               pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                           },
+                           plotOptions: {
+                               pie: {
+                                   allowPointSelect: true,
+                                   cursor: 'pointer',
+                                   dataLabels: {
+                                       enabled: false
+                                   },
+                                   showInLegend: true
+                               }
+                           },
+                           series: [{
+                               name: '',
+                               colorByPoint: true,
+                               data: [{
+                                   name: 'Mortgage',
+                                   y: 45
+                               }, {
+                                   name: 'Rent',
+                                   y: 0,
+                                   sliced: true,
+                                   selected: true
+                               }, {
+                                   name: 'Car Payments',
+                                   y: 20
+                               }, {
+                                   name: 'Luxuries',
+                                   y: 5
+                               }, {
+                                   name: 'Food',
+                                   y: 15
+                               }, {
+                                   name: 'Holidays',
+                                   y:5
+                               }]
+                           }]
+                       });
+
+                   });
+               });
+
+
+               </script>
+  {%endblock%}

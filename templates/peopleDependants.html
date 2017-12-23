@@ -1,0 +1,2484 @@
+{%extends 'gen_style.html'%}
+
+{% block mainBlock%}
+<!-- Title providing text in window tab -->
+<title>Health</title>
+<!-- Container holding page content -->
+  <div class="container">
+
+      <div class="row wow slideInLeft">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="col-md-12 ">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                   <h2><i>Dependants Form</i> </h2>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in bshadow" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+    <!-- Dependants form -->
+  <form>
+    <!-- tickbox for dependants form -->
+    <div class="col-xs-12">
+    <label class="checkbox-inline">
+       <input type="checkbox" class="faChkRnd" onclick="javascript:yesnoChild();" name="yesno" id="childCheck"><span style="padding-left:10px;"> Children</span>
+     </label>
+<!-- tickbox for dependants form -->
+     <label class="checkbox-inline">
+        <input type="checkbox" class="faChkRnd"  onclick="javascript:yesnoGrandChild();" name="yesno" id="grandChildCheck"><span style="padding-left:10px;">Grand Children</span>
+     </label>
+<!-- tickbox for dependants form -->
+     <label class="checkbox-inline">
+        <input type="checkbox" class="faChkRnd"  onclick="javascript:yesnoParent();" name="yesno" id="parentCheck"><span style="padding-left:10px;">Parent</span>
+     </label>
+<!-- tickbox for dependants form -->
+     <label class="checkbox-inline">
+        <input type="checkbox" class="faChkRnd"  onclick="javascript:yesnoOther();" name="yesno" id="otherCheck"><span style="padding-left:10px;">Other</span>
+     </label>
+<!--message to user-->
+<br>
+<P style="padding-top:15px;"><small>If none move on to Finances</small><P>
+</div>
+
+<!-- Field that appears if tickbox related to that field was chosen-->
+    <div id="childYes" style="display:none" class="form-group col-md-3">
+      <label for="formGroupExampleInput">  How many children?</label>
+      <input type='number' class="form-control" id='childNumber' min="0" max="10" name='yes'><br>
+    </div>
+    <!-- Field that appears if tickbox related to that field was chosen-->
+        <div id="grandChildYes" style="display:none" class="form-group col-md-3">
+          <label for="formGroupExampleInput">  How many Grand children?</label>
+             <input type='number' class="form-control" id='grandchildNumber' min="0" max="10" name='yes'><br>
+      </div>
+      <!-- Field that appears if tickbox related to that field was chosen-->
+              <div id="ParentYes" style="display:none" class="form-group col-md-3">
+                <label for="formGroupExampleInput">  How many Parents?</label>
+                   <input type='number' class="form-control" id='parentNumber' min="0" max="4" name='yes'><br>
+            </div>
+            <!-- Field that appears if tickbox related to that field was chosen-->
+                          <div id="OtherYes" style="display:none" class="form-group col-md-3">
+                            <label for="formGroupExampleInput">  How many others?</label>
+                               <input type='number' class="form-control" id='otherNumber' min="0" max="4" name='yes'><br>
+                        </div>
+
+                        <!-- child 1 form -->
+                        <div id="childTable" style="display:none;" class="col-xs-12">
+                          <h2 class="text-centered">Children</h2>
+<div class="row col-xs-12">
+
+<!--Child 1 Form -->
+
+<h3>Child 1</h3>
+                        <!-- Field for child1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for child1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for child1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                          </div>
+                          <!-- Field for child1 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--Child 2 Form -->
+<div class="row col-xs-12" id="child2" style="display:none;">
+<h3>Child 2</h3>
+                          <!-- Field for child2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for child2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for child2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                      </div>
+                      <!-- Field for child2 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--Child 3 Form -->
+<div class="row col-xs-12" id="child3" style="display:none;">
+<h3>Child 3</h3>
+                            <!-- Field for child3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for child3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for child3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                      </div>
+                      <!-- Field for child3 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--Child 4 Form -->
+<div class="row col-xs-12" id="child4" style="display:none;">
+<h3>Child 4</h3>
+                          <!-- Field for child4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for child4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for child4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for child4 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--Child 5 Form -->
+<div class="row col-xs-12" id="child5" style="display:none;">
+<h3>Child 5</h3>
+                          <!-- Field for child5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                            <!-- Field for child5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for child5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for child5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for child5 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--Child 6 Form -->
+<div class="row col-xs-12" id="child6" style="display:none;">
+<h3>Child 6</h3>
+                            <!-- Field for child6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for child6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for child6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for child6 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--Child 7 Form -->
+<div class="row col-xs-12" id="child7" style="display:none;">
+<h3>Child 7</h3>
+                          <!-- Field for child7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for child7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for child7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for child7 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--Child 8 Form -->
+<div class="row col-xs-12" id="child8" style="display:none;">
+<h3>Child 8</h3>
+                        <!-- Field for child8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for child8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for child8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for child8 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--Child 9 Form -->
+<div class="row col-xs-12" id="child9" style="display:none;">
+<h3>Child 9</h3>
+                          <!-- Field for child9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for child9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for child9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for child9 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--Child 10 Form -->
+<div class="row col-xs-12" id="child10" style="display:none;">
+<h3>Child 10</h3>
+                          <!-- Field for child10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for child10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for child10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for child10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for child10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for child10 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+</div>
+<!--End of child forms -->
+
+<!-- Begining of Grand child forms -->
+<div id="grandchildTable" style="display:none;" class="col-xs-12">
+  <h2>GrandChildren</h2>
+<div class="row col-xs-12">
+
+<!--Grand Child 1 Form -->
+
+
+<h3>grandchild 1</h3>
+                          <!-- Field for grandchild1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for grandchild1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for grandchild1 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for grandchild1 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--grandchild 2 Form -->
+<div class="row col-xs-12" id="grandchild2" style="display:none;">
+<h3>grandchild 2</h3>
+                          <!-- Field for grandchild2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for grandchild2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for grandchild2 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for grandchild2 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--grandchild 3 Form -->
+<div class="row col-xs-12" id="grandchild3" style="display:none;">
+<h3>grandchild 3</h3>
+                          <!-- Field for grandchild3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for grandchild3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for grandchild3 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for grandchild3 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--grandchild 4 Form -->
+<div class="row col-xs-12" id="grandchild4" style="display:none;">
+<h3>grandchild 4</h3>
+                        <!-- Field for grandchild4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for grandchild4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for grandchild4 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for grandchild4 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--grandchild 5 Form -->
+<div class="row col-xs-12" id="grandchild5" style="display:none;">
+<h3>grandchild 5</h3>
+                          <!-- Field for grandchild5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for grandchild5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for grandchild5 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for grandchild5 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--grandchild 6 Form -->
+<div class="row col-xs-12" id="grandchild6" style="display:none;">
+<h3>grandchild 6</h3>
+                          <!-- Field for grandchild6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for grandchild6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for grandchild6 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for grandchild6 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--grandchild 7 Form -->
+<div class="row col-xs-12" id="grandchild7" style="display:none;">
+<h3>grandchild 7</h3>
+                          <!-- Field for grandchild7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for grandchild7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for grandchild7 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for grandchild7 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--grandchild 8 Form -->
+<div class="row col-xs-12" id="grandchild8" style="display:none;">
+<h3>grandchild 8</h3>
+                        <!-- Field for grandchild8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for grandchild8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for grandchild8 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for grandchild8 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--grandchild 9 Form -->
+<div class="row col-xs-12" id="grandchild9" style="display:none;">
+<h3>grandchild 9</h3>
+                            <!-- Field for grandchild9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for grandchild9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for grandchild9 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for grandchild9 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--grandchild 10 Form -->
+<div class="row col-xs-12" id="grandchild10" style="display:none;">
+<h3>grandchild 10</h3>
+                          <!-- Field for grandchild10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!-- Field for grandchild10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!-- Field for grandchild10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!-- Field for grandchild10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!-- Field for grandchild10 form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!-- Field for grandchild10 form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+</div>
+
+<!-- End of Grand child forms -->
+
+<!-- Begining of Parent forms -->
+
+<div id="parentTable" style="display:none;" class="col-xs-12">
+  <h2>parent</h2>
+<div class="row col-xs-12">
+
+<!--Parent 1 Form -->
+
+
+<h3>parent 1</h3>
+                        <!--Field for Parent 1 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--Field for Parent 1 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 1 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 1 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 1 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 1 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--Field for Parent 1 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!--Field for Parent 1 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!--Field for Parent 1 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!--Field for Parent 1 Form-->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--parent 2 Form -->
+<div class="row col-xs-12" id="parent2" style="display:none;">
+<h3>parent 2</h3>
+                          <!--Field for Parent 2 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--Field for Parent 2 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 2 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 2 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 2 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 2 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--Field for Parent 2 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!--Field for Parent 2 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!--Field for Parent 2 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!--Field for Parent 2 Form-->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--parent 3 Form -->
+<div class="row col-xs-12" id="parent3" style="display:none;">
+<h3>parent 3</h3>
+                            <!--Field for Parent 3 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--Field for Parent 3 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 3 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 3 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 3 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 3 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--Field for Parent 3 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!--Field for Parent 3 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!--Field for Parent 3 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!--Field for Parent 3 Form-->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--parent 4 Form -->
+<div class="row col-xs-12" id="parent4" style="display:none;">
+<h3>parent 4</h3>
+                          <!--Field for Parent 4 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--Field for Parent 4 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 4 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 4 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 4 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--Field for Parent 4 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--Field for Parent 4 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!--Field for Parent 4 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!--Field for Parent 4 Form-->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!--Field for Parent 4 Form-->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+</div>
+
+<!-- End of Parent forms -->
+
+<!-- Begining of Other forms -->
+
+<div id="otherTable" style="display:none;" class="col-xs-12">
+  <h2>other</h2>
+<div class="row col-xs-12">
+
+<!--other1 Form -->
+
+
+<h3>other 1</h3>
+                        <!--field for other1 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--field for other1 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other1 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other1 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other1 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other1 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--field for other1 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!--field for other1 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!--field for other1 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!--field for other1 Form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--other 2 Form -->
+<div class="row col-xs-12" id="other2" style="display:none;">
+<h3>other 2</h3>
+                          <!--field for other2 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--field for other2 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other2 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other2 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other2 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other2 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--field for other2 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!--field for other2 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!--field for other2 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!--field for other2 Form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--other 3 Form -->
+<div class="row col-xs-12" id="other3" style="display:none;">
+<h3>other 3</h3>
+                          <!--field for other3 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--field for other3 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other3 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other3 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other3 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other3 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--field for other3 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!--field for other3 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!--field for other3 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!--field for other3 Form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+<!--other 4 Form -->
+<div class="row col-xs-12" id="other4" style="display:none;">
+<h3>other 4</h3>
+                          <!--field for other4 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Title</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Mr</option>
+                          <option>Ms</option>
+                          <option>Mrs</option>
+                          <option>Mx</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--field for other4 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">First name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other4 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Initials</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other4 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Surname</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other4 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Prefers</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                          </div>
+                          <!--field for other4 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">Sex</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Trans</option>
+                          <option>Other</option>
+                        </select>
+                          </div>
+                          <!--field for other4 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Date of birth</label>
+                            <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                          </div>
+                          <!--field for other4 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput2">Relationship</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                          </div>
+                          <!--field for other4 Form -->
+                          <div class="form-group col-md-2">
+                            <label for="formGroupExampleInput">financially dependent</label>
+                            <select class="form-control">
+                          <option>Please Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
+                            </div>
+                            <!--field for other4 Form -->
+                          <div class="form-group col-md-6">
+                            <label for="formGroupExampleInput2">Notes</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                          </div>
+</div>
+
+</div>
+
+
+<!-- End of Other forms -->
+<!--buttons to save the information to the database or cancel to go nacl to the homepage -->
+<div class="col-xs-12">
+  <button class="btn btn-danger col-md-2 col-md-offset-5"><span class="glyphicon glyphicon-trash"></span> Cancel</button>
+  <button class="btn btn-success col-md-2 col-md-offset-"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+</div>
+</form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+
+    </div>
+  </div>
+
+
+
+  </div>
+
+  <!-- End Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/core.js"></script>
+
+  <script>
+    new WOW().init();
+    </script>
+    <script type="text/javascript">
+
+// If children checkbox selected show number of children box
+    function yesnoChild() {
+        if (document.getElementById('childCheck').checked) {
+            document.getElementById('childYes').style.display = 'block';
+        }
+        else document.getElementById('childYes').style.display = 'none';
+    }
+
+
+
+
+// If Grand children checkbox selected show number of Grand children box
+    function yesnoGrandChild() {
+        if (document.getElementById('grandChildCheck').checked) {
+            document.getElementById('grandChildYes').style.display = 'block';
+        }
+        else document.getElementById('grandChildYes').style.display = 'none';
+    }
+
+
+
+
+// If Parents checkbox selected show number of parents box
+    function yesnoParent() {
+        if (document.getElementById('parentCheck').checked) {
+            document.getElementById('ParentYes').style.display = 'block';
+        }
+        else document.getElementById('ParentYes').style.display = 'none';
+    }
+
+// If Other checkbox selected show number of other box
+    function yesnoOther() {
+        if (document.getElementById('otherCheck').checked) {
+            document.getElementById('OtherYes').style.display = 'block';
+        }
+        else document.getElementById('OtherYes').style.display = 'none';
+    }
+
+//jquery for form section loading
+    $(document).ready(function() {
+// If number of children Contains a value show children section
+$("#childNumber").keyup(function() {
+    if (this.value != "") {
+        $("#childTable").css("display", "block");
+    }
+    else {
+        $("#childTable").css("display", "none");
+    }
+});
+
+// If number of children Contains a value over 1 show children section 2
+$("#childNumber").keyup(function() {
+    if (this.value > 1) {
+        $("#child2").css("display", "block");
+    }
+    else {
+        $("#child2").css("display", "none");
+    }
+});
+
+// If number of children Contains a value over 2 show children section 3
+$("#childNumber").keyup(function() {
+    if (this.value > 2) {
+        $("#child3").css("display", "block");
+    }
+    else {
+        $("#child3").css("display", "none");
+    }
+});
+
+// If number of children Contains a value over 3 show children section 4
+$("#childNumber").keyup(function() {
+    if (this.value > 3) {
+        $("#child4").css("display", "block");
+    }
+    else {
+        $("#child4").css("display", "none");
+    }
+});
+
+// If number of children Contains a value over 4 show children section 5
+$("#childNumber").keyup(function() {
+    if (this.value > 4) {
+        $("#child5").css("display", "block");
+    }
+    else {
+        $("#child5").css("display", "none");
+    }
+});
+
+// If number of children Contains a value over 5 show children section 6
+$("#childNumber").keyup(function() {
+    if (this.value > 5) {
+        $("#child6").css("display", "block");
+    }
+    else {
+        $("#child6").css("display", "none");
+    }
+});
+
+// If number of children Contains a value over 6 show children section 7
+$("#childNumber").keyup(function() {
+    if (this.value > 6) {
+        $("#child7").css("display", "block");
+    }
+    else {
+        $("#child7").css("display", "none");
+    }
+});
+
+// If number of children Contains a value over 7 show children section 8
+$("#childNumber").keyup(function() {
+    if (this.value > 7) {
+        $("#child8").css("display", "block");
+    }
+    else {
+        $("#child8").css("display", "none");
+    }
+});
+
+// If number of children Contains a value over 8 show children section 9
+$("#childNumber").keyup(function() {
+    if (this.value > 8) {
+        $("#child9").css("display", "block");
+    }
+    else {
+        $("#child9").css("display", "none");
+    }
+});
+
+// If number of children Contains a value over 9 show children section 10
+$("#childNumber").keyup(function() {
+    if (this.value > 9) {
+        $("#child10").css("display", "block");
+    }
+    else {
+        $("#child10").css("display", "none");
+    }
+});
+});
+
+//jquery for form section loading
+    $(document).ready(function() {
+// If number of grandchildren Contains a value show grandchildren section
+$("#grandchildNumber").keyup(function() {
+    if (this.value != "") {
+        $("#grandchildTable").css("display", "block");
+    }
+    else {
+        $("#grandchildTable").css("display", "none");
+    }
+});
+
+// If number of grandchildren Contains a value over 1 show grandchildren section 2
+$("#grandchildNumber").keyup(function() {
+    if (this.value > 1) {
+        $("#grandchild2").css("display", "block");
+    }
+    else {
+        $("#grandchild2").css("display", "none");
+    }
+});
+
+// If number of grandchildren Contains a value over 2 show grandchildren section 3
+$("#grandchildNumber").keyup(function() {
+    if (this.value > 2) {
+        $("#grandchild3").css("display", "block");
+    }
+    else {
+        $("#grandchild3").css("display", "none");
+    }
+});
+
+// If number of grandchildren Contains a value over 3 show grandchildren section 4
+$("#grandchildNumber").keyup(function() {
+    if (this.value > 3) {
+        $("#grandchild4").css("display", "block");
+    }
+    else {
+        $("#grandchild4").css("display", "none");
+    }
+});
+
+// If number of grandchildren Contains a value over 4 show grandchildren section 5
+$("#grandchildNumber").keyup(function() {
+    if (this.value > 4) {
+        $("#grandchild5").css("display", "block");
+    }
+    else {
+        $("#grandchild5").css("display", "none");
+    }
+});
+
+// If number of grandchildren Contains a value over 5 show grandchildren section 6
+$("#grandchildNumber").keyup(function() {
+    if (this.value > 5) {
+        $("#grandchild6").css("display", "block");
+    }
+    else {
+        $("#grandchild6").css("display", "none");
+    }
+});
+
+// If number of grandchildren Contains a value over 6 show grandchildren section 7
+$("#grandchildNumber").keyup(function() {
+    if (this.value > 6) {
+        $("#grandchild7").css("display", "block");
+    }
+    else {
+        $("#grandchild7").css("display", "none");
+    }
+});
+
+// If number of grandchildren Contains a value over 7 show grandchildren section 8
+$("#grandchildNumber").keyup(function() {
+    if (this.value > 7) {
+        $("#grandchild8").css("display", "block");
+    }
+    else {
+        $("#grandchild8").css("display", "none");
+    }
+});
+
+// If number of grandchildren Contains a value over 8 show grandchildren section 9
+$("#grandchildNumber").keyup(function() {
+    if (this.value > 8) {
+        $("#grandchild9").css("display", "block");
+    }
+    else {
+        $("#grandchild9").css("display", "none");
+    }
+});
+
+// If number of grandchildren Contains a value over 9 show grandchildren section 10
+$("#grandchildNumber").keyup(function() {
+    if (this.value > 9) {
+        $("#grandchild10").css("display", "block");
+    }
+    else {
+        $("#grandchild10").css("display", "none");
+    }
+});
+});
+
+
+//jquery for form section loading
+    $(document).ready(function() {
+// If number of parent Contains a value show parent section
+$("#parentNumber").keyup(function() {
+    if (this.value != "") {
+        $("#parentTable").css("display", "block");
+    }
+    else {
+        $("#parentTable").css("display", "none");
+    }
+});
+
+// If number of parent Contains a value over 1 show parent section 2
+$("#parentNumber").keyup(function() {
+    if (this.value > 1) {
+        $("#parent2").css("display", "block");
+    }
+    else {
+        $("#parent2").css("display", "none");
+    }
+});
+
+// If number of parent Contains a value over 2 show parent section 3
+$("#parentNumber").keyup(function() {
+    if (this.value > 2) {
+        $("#parent3").css("display", "block");
+    }
+    else {
+        $("#parent3").css("display", "none");
+    }
+});
+
+// If number of parent Contains a value over 3 show parent section 4
+$("#parentNumber").keyup(function() {
+    if (this.value > 3) {
+        $("#parent4").css("display", "block");
+    }
+    else {
+        $("#parent4").css("display", "none");
+    }
+});
+
+});
+
+
+//jquery for form section loading
+    $(document).ready(function() {
+// If number of other Contains a value show other section
+$("#otherNumber").keyup(function() {
+    if (this.value != "") {
+        $("#otherTable").css("display", "block");
+    }
+    else {
+        $("#otherTable").css("display", "none");
+    }
+});
+
+// If number of other Contains a value over 1 show other section 2
+$("#otherNumber").keyup(function() {
+    if (this.value > 1) {
+        $("#other2").css("display", "block");
+    }
+    else {
+        $("#other2").css("display", "none");
+    }
+});
+
+// If number of other Contains a value over 2 show other section 3
+$("#otherNumber").keyup(function() {
+    if (this.value > 2) {
+        $("#other3").css("display", "block");
+    }
+    else {
+        $("#other3").css("display", "none");
+    }
+});
+
+// If number of other Contains a value over 3 show other section 4
+$("#otherNumber").keyup(function() {
+    if (this.value > 3) {
+        $("#other4").css("display", "block");
+    }
+    else {
+        $("#other4").css("display", "none");
+    }
+});
+
+});
+    </script>
+
+    {%endblock%}

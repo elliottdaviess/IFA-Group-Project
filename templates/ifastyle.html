@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<head>
+  <!-- linked stylesheet and script for sweet alerts -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.1.0/sweetalert2.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.1.0/sweetalert2.js"></script>
+
+<!-- linked stylesheet for bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- linked script for jquery -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<!-- linked script for wow.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<!-- linked script for bootsrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+<!-- linked local stylesheet -->
+<link href="/static/css/style.css" rel="stylesheet">
+
+<script src="https://use.fontawesome.com/ba7d4790f8.js"></script>
+<!-- linked stylesheet for animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+<!-- linked tab Icon -->
+<link rel="shortcut icon" href="Website-Home.ico" />
+<style>
+@media print
+{
+    .no-print, .no-print *
+    {
+        font-size: 1em;
+        border-color: #990000;
+        font-family: "Times New Roman", Times, serif;
+
+    }
+
+    .no-print-info
+    {
+        line-height: 2em;
+        font-size: 1.4em;
+        border-color: #990000;
+        font-family: "Times New Roman", Times, serif;
+        align-self: center;
+
+    }
+
+  .only-print
+    {
+    display: block !important;
+    }
+
+}
+
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse bshadow wow slideInDown">
+  <div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Fact Finder</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/ifalanding"><Span class="glyphicon glyphicon-home"></span> Home <span class="sr-only">(current)</span></a></li>
+      <li ><a href="/ifastats"><Span class="glyphicon glyphicon-object-align-bottom"></span> Stats <span class="sr-only"></span></a></li>
+      <li ><a href="/SearchClients"><Span class="glyphicon glyphicon-user"></span> Client Search <span class="sr-only"></span></a></li>
+</ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Account <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="/reg"><span class="glyphicon glyphicon-lock"></span> Change password</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+
+         {% block mainBlock%} Page under construction. {%endblock%}
+
+
+
+      <script>
+                   new WOW().init();
+
+
+
+                   </script>

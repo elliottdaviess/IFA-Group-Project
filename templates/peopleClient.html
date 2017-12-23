@@ -1,0 +1,290 @@
+{%extends 'gen_style.html'%}
+{% block mainBlock%}
+<!-- Title providing text in window tab -->
+<title> Input your Details </title>
+<!-- Container holding page content -->
+  <div class="container">
+    <div id="added_Data" class="alert alert-success alert-dismissible wow slideInRight" role="alert"  >
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong>Success!</strong> Your data was added. <a class="alert-link" href="/peopleTaxStatus">Move on to tax details</a>
+    </div>
+      <div class="row wow slideInLeft">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="col-md-12 ">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                   <h2><i>Client Details Form</i> </h2>
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in bshadow" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+      <!-- client form -->
+  <form id="peopleclient" method = "POST">
+      <!-- Field for client form -->
+  <div class="form-group col-md-2">
+    <label for="title">Title</label>
+    <select class="form-control" name="title" id="title">
+  <option>Please Select</option>
+  <option>Mr</option>
+  <option>Ms</option>
+  <option>Mrs</option>
+  <option>Mx</option>
+  <option>Other</option>
+</select>
+  </div>
+  <!-- Field for client form -->
+  <div class="form-group col-md-3">
+    <label for="first_name">First name</label>
+    <input type="text" class="form-control" name="first_name" id="first_name" placeholder="First name">
+  </div>
+  <!-- Field for client form -->
+  <div class="form-group col-md-2">
+    <label for="initials">Initials</label>
+    <input type="text" class="form-control" name="initials" id="initials" placeholder="Initials">
+  </div>
+  <!-- Field for client form -->
+  <div class="form-group col-md-3">
+    <label for="surname">Surname</label>
+    <input type="text" class="form-control" name="surname" id="surname" placeholder="Surname">
+  </div>
+  <!-- Field for client form -->
+  <div class="form-group col-md-2">
+    <label for="prefers">Prefers</label>
+    <input type="text" class="form-control" name="prefers" id="prefers" placeholder="Prefers">
+  </div>
+  <!-- Field for client form -->
+  <div class="form-group col-md-2">
+    <label for="sex">Sex</label>
+    <select class="form-control" name="sex" id="sex">
+  <option>Please Select</option>
+  <option>Male</option>
+  <option>Female</option>
+  <option>Trans</option>
+  <option>Other</option>
+</select>
+  </div>
+  <!-- Field for client form -->
+  <div class="form-group col-md-3">
+    <label for="marital_status">Marital Status</label>
+    <select class="form-control" name="marital_status" id="marital_status">
+  <option>Please Select</option>
+  <option>Single</option>
+  <option>Divorced</option>
+  <option>Married</option>
+  <option>Other</option>
+</select>
+  </div>
+  <!-- Field for client form -->
+  <div class="form-group col-md-2">
+    <label for="dob">Date of birth</label>
+    <input type="Date" class="form-control" name="dob" id="dob" placeholder="D.O.B">
+  </div>
+  <!-- Field for client form -->
+<div class="form-group col-md-3">
+  <label for="maiden_name">Maiden name</label>
+  <input type="text" class="form-control"name="maiden_name" id="maiden_name" placeholder="Maiden name">
+</div>
+<!-- Field for client form -->
+<div class="form-group col-md-2">
+  <label for="retire_age">Retire at age</label>
+  <input type="number" class="form-control" name="retire_age" id="retire_age" placeholder="Retirement age">
+</div>
+<!-- Field for client form -->
+<div class="form-group col-md-6">
+  <label for="religious">Ethical/Religious beliefs that might affect financial planning?</label>
+  <input type="text" class="form-control" name="religious" id="religious" placeholder="">
+</div>
+<!-- Field for client form -->
+<div class="form-group col-md-6">
+  <label for="changes">Anticipated changes in next 5 years?</label>
+  <input type="text" class="form-control" name="changes" id="changes" placeholder="">
+</div>
+<!-- non editable Field for client form -->
+<h3><i> Meetings</i> </h3>
+<div class="form-group col-md-4">
+  <label for="">1st</label>
+  <input type="date" class="form-control" id="" placeholder="" value="" disabled >
+</div>
+<!-- non editable Field for client form -->
+<div class="form-group col-md-4">
+  <label for="">Last</label>
+  <input type="date" class="form-control" id="" placeholder="" disabled >
+</div>
+<!-- non editable Field for client form -->
+<div class="form-group col-md-4">
+  <label for="">Next</label>
+  <input type="date" class="form-control" id="" placeholder="" disabled >
+</div>
+<!-- buttons to submit data inputed into the database to be stored -->
+<button type="button" class="btn btn-sm btn-info col-md-3" data-toggle="modal" data-target="#myModal"><span class=" glyphicon glyphicon-modal-window"></span> Update Contact Details</button> <!-- Trigger the modal with this button -->
+<button class="btn btn-danger col-md-2 col-md-offset-5"><span class="glyphicon glyphicon-trash"></span> Cancel</button>
+<button class="btn btn-success col-md-2 col-md-offset-" onclick="cookieclientdata()"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+</form>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+    </div>
+  </div>
+  <!-- Modal to add more client data/different fields -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Update Contact Details</h4>
+          </div>
+          <form>
+            <!-- Field for client modal -->
+            <div class="form-group col-md-3"> <!-- this gets the design from the bootstrap external css file -->
+              <label for="">Mobile no.</label>  <!-- this makes the form item for mobile number -->
+              <input type="text" class="form-control" id="" placeholder="Mobile no" >
+            </div>
+            <!-- Field for client modal -->
+            <div class="form-group col-md-3"> <!-- this gets the design from the bootstrap external css file -->
+              <label for="">Landline no.</label> <!-- this makes the form item for landline number -->
+              <input type="text" class="form-control" id="" placeholder="Landline no">
+            </div>
+            <!-- Field for client modal -->
+            <div class="form-group col-md-3"> <!-- this gets the design from the bootstrap external css file -->
+              <label for="">Alternative Email</label> <!-- this makes the form item for alternative email -->
+              <input type="text" class="form-control" id="" placeholder="Alternative Email">
+            </div>
+            <!-- Field for client modal -->
+            <div class="form-group col-md-3"> <!-- this gets the design from the bootstrap external css file -->
+              <label for="">Main Email</label> <!-- this makes the form item for mail email -->
+              <input type="text" class="form-control" id="" readonly="true" value ="bryantas@cardiff.ac.uk">
+            </div>
+            <!-- Field for client modal -->
+            <div class="form-group col-md-6"> <!-- this gets the design from the bootstrap external css file -->
+              <label for="">Address 1</label> <!-- this makes the form item for first address -->
+              <input type="text" class="form-control" id="" placeholder="Address 1">
+            </div>
+            <!-- Field for client modal -->
+            <div class="form-group col-md-6"> <!-- this gets the design from the bootstrap external css file -->
+              <label for="">Address 2</label> <!-- this makes the form item for second address -->
+              <input type="text" class="form-control" id="" placeholder="Address 2">
+            </div>
+            <!-- Field for client modal -->
+            <div class="form-group col-md-6"> <!-- this gets the design from the bootstrap external css file -->
+              <label for="">Address 3</label> <!-- this makes the form item for third address -->
+              <input type="text" class="form-control" id="" placeholder="Address 3">
+            </div>
+            <!-- Field for client modal -->
+            <div class="form-group col-md-3"> <!-- this gets the design from the bootstrap external css file -->
+              <label for="">Town</label> <!-- this makes the form item for town -->
+              <input type="text" class="form-control" id="town" placeholder="Town">
+            </div>
+            <!-- Field for client modal -->
+            <div class="form-group col-md-3"> <!-- this gets the design from the bootstrap external css file -->
+              <label for="">Postcode</label> <!-- this makes the form item for the postcode -->
+              <input type="text" class="form-control" id="postcode" placeholder="Postcode">
+            </div>
+            <!-- buttons to save extra data to the database -->
+            <div class="form-group col-md-3">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <!-- this makes the button to close the pop up -->
+            <button class="btn btn-sm btn-success" onclick=":" >Save</button> <!-- this makes the button that saves the information -->
+            </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input id="msg" value="{{ msg }}" hidden="true">
+  <!-- End Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/core.js"></script>
+  <script>
+  new WOW().init();
+
+  $(document).ready(function(){
+  var val = $("#msg").val();
+  if (val == '') {
+          $("#added_Data").css("display", "none");
+      }
+   });
+  </script>
+<script>
+function validate()
+{
+    var postcode = document.getElementById('postcode').value;
+    var town = document.getElementById('town').value;
+    var landlineNo = document.getElementById('landlineNo').value;
+    var regPostcode = /^([a-zA-Z]){1}([0-9][0-9]|[0-9]|[a-zA-Z][0-9][a-zA-Z]|[a-zA-Z][0-9][0-9]|[a-zA-Z][0-9]){1}([ ])([0-9][a-zA-z][a-zA-z]){1}$/;
+    var letters = /^[A-Za-z]+$/; //using this to validate town field
+    var numbers     = /^[0-9]+$/; //Using this to validate landlineNo field
+    // Validate Character only fields
+    if(town.match(letters) == null)
+    {
+      alert("You've entered a number in the 'Town' field");
+      return false;
+    }
+  //Validate Postcode
+    if (regPostcode.test(postcode) == false) //if postcode does not match the format given by the variable 'numbers'
+    {
+      alert('Invalid Postcode');
+      return false;
+    }
+
+    // Validate landlineNo field.
+
+   if(landlineNo.match(numbers) == null) //if landlineNo does not match the format given by the variable 'numbers' (must only contain numbers)
+
+   {
+
+     alert('Please input numeric characters only in the Phone Number field');
+
+     return false;
+
+   }
+
+
+   return true;
+
+
+}
+
+function cookieclientdata(){
+  console.log("cookieclientdata")
+  var title = document.getElementById('title').value;
+  var first_name = document.getElementById('first_name').value;
+  var initials = document.getElementById('initials').value;
+  var surname = document.getElementById('surname').value;
+  var prefers = document.getElementById('prefers').value;
+  var sex = document.getElementById('sex').value;
+  var marital_status = document.getElementById('marital_status').value;
+  var dob = document.getElementById('dob').value;
+  var retire_age = document.getElementById('retire_age').value;
+  var religious = document.getElementById('religious').value;
+  var changes = document.getElementById('changes').value;
+  console.log(title);
+  console.log(first_name);
+  console.log(initials);
+  console.log(surname);
+  console.log(sex);
+  console.log(marital_status);
+  console.log(dob);
+  console.log(retire_age);
+  console.log(religious);
+  console.log(changes);
+  var d = new Date();
+  d.setTime(d.getTime() + (24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = "clientdetails_title" + "=" + title + ";" + expires;
+  document.cookie = "clientdetails_first_name" + "=" + first_name + ";" + expires;
+  document.cookie = "clientdetails_initials" + "=" + initials + ";" + expires;
+  document.cookie = "clientdetails_surname" + "=" + surname + ";" + expires;
+  document.cookie = "clientdetails_prefers" + "=" + prefers + ";" + expires;
+  document.cookie = "clientdetails_" + "=" +  + ";" + expires;
+  document.cookie = "clientdetails_" + "=" +  + ";" + expires;
+  document.cookie = "clientdetails_" + "=" +  + ";" + expires;
+  document.cookie = "clientdetails_" + "=" +  + ";" + expires;
+  document.cookie = "clientdetails_" + "=" +  + ";" + expires;
+}
+ </script>
+
+   {%endblock%}

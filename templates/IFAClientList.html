@@ -1,0 +1,111 @@
+{%extends 'ifastyle.html'%}
+
+{% block mainBlock%}
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 style="text-align: center;">Client search </h1>
+            </div>
+        </div>
+        <div class="row">
+          <input id="tablesearchinput" class="form-control col-xs-8 " placeholder="Search..." >
+          <br>
+          <table id="tabledata"  class="table  table-hover  table-condensed table-info table-fixed col-xs-12">
+            <thead>
+<tr>
+<td>First Name</td>
+<td>Surname</td>
+<td>Email</td>
+<td>Phone number</td>
+</tr>
+            </thead>
+
+              <tbody>
+                  <tr>
+                      <td>Aaron</td>
+                      <td>Bryant</td>
+                      <td>Demo@fakeemail.com</td>
+                      <td>079600000000</td>
+                  </tr>
+                  <tr>
+                      <td>Victoria</td>
+                      <td>Turner</td>
+                      <td>vic@fakeemail.com</td>
+                      <td>079600007490</td>
+                  </tr>
+                  <tr>
+                      <td>David</td>
+                      <td>chappell</td>
+                      <td>Dchap@fakeemail.com</td>
+                      <td>079600053640</td>
+                  </tr>
+                  <tr>
+                      <td>lucy</td>
+                      <td>child</td>
+                      <td>Lchild@fakeemail.com</td>
+                      <td>079608720000</td>
+                  </tr>
+                  <tr>
+                      <td>Lucas</td>
+                      <td>Smalls</td>
+                      <td>Lsmall@fakeemail.com</td>
+                      <td>079600000000</td>
+                  </tr>
+                  <tr>
+                      <td>henry</td>
+                      <td>Summers </td>
+                      <td>Summers@fakeemail.com</td>
+                      <td>079666600460</td>
+                  </tr>
+                  <tr>
+                      <td>Aaron</td>
+                      <td>Bryant</td>
+                      <td>Demo@fakeemail.com</td>
+                      <td>079600000000</td>
+                  </tr>
+                  <tr>
+                      <td>Victoria</td>
+                      <td>Turner</td>
+                      <td>vic@fakeemail.com</td>
+                      <td>079600007490</td>
+                  </tr>
+                  <tr>
+                      <td>David</td>
+                      <td>chappell</td>
+                      <td>Dchap@fakeemail.com</td>
+                      <td>079600053640</td>
+                  </tr>
+                  <tr>
+                      <td>lucy</td>
+                      <td>child</td>
+                      <td>Lchild@fakeemail.com</td>
+                      <td>079608720000</td>
+                  </tr>
+                  <tr>
+                      <td>Lucas</td>
+                      <td>Smalls</td>
+                      <td>Lsmall@fakeemail.com</td>
+                      <td>079600000000</td>
+                  </tr>
+                  <tr>
+                      <td>henry</td>
+                      <td>Summers </td>
+                      <td>Summers@fakeemail.com</td>
+                      <td>079666600460</td>
+                  </tr>
+              </tbody>
+          </table>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-searcher/0.3.0/jquery.searcher.js"></script>
+
+  <script>
+               new WOW().init();
+
+               $("#tabledata").searcher({
+                   inputSelector: "#tablesearchinput"
+                   // itemSelector (tbody > tr) and textSelector (td) already have proper default values
+               });
+
+               </script>
+           {%endblock%}

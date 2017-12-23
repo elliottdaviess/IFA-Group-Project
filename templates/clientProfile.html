@@ -1,0 +1,3507 @@
+{%extends 'gen_style.html'%}
+{% block mainBlock%}
+
+<div class="container">
+    <div class="row wow slideInLeft">
+      <div class="wrapper">
+        <div class="container">
+
+          <br>
+
+          <nav class="navbar navbar-default" role="navigation">
+            <div class="container">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-slide-dropdown">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-slide-dropdown">
+                  <ul class="nav navbar-nav navbar-nav-responsive">
+                    <li role="presentation" class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">People<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu" role="menu" aria-labelledby="myMenuDrop1" id="myTabDrop1-contents">
+                          <li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">Basic details</a></li>
+                          <li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">Tax Status</a></li>
+                          <li><a href="#dropdown3" tabindex="-1" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown3">Health</a></li>
+                          <li><a href="#dropdown4" tabindex="-1" role="tab" id="dropdown4-tab" data-toggle="tab" aria-controls="dropdown4">Occupations</a></li>
+                          <li><a href="#dropdown5" tabindex="-1" role="tab" id="dropdown5-tab" data-toggle="tab" aria-controls="dropdown5">Dependents</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Finances<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                            <li><a href="#dropdown6" tabindex="-1" role="tab" id="dropdown6-tab" data-toggle="tab" aria-controls="dropdown6">Income</a></li>
+                            <li><a href="#dropdown7" tabindex="-1" role="tab" id="dropdown7-tab" data-toggle="tab" aria-controls="dropdown7">Expenditure</a></li>
+                            <li><a href="#dropdown8" tabindex="-1" role="tab" id="dropdown8-tab" data-toggle="tab" aria-controls="dropdown8">Assets</a></li>
+                            <li><a href="#dropdown9" tabindex="-1" role="tab" id="dropdown9-tab" data-toggle="tab" aria-controls="dropdown9">Liability</a></li>
+                            <li><a href="#dropdown10" tabindex="-1" role="tab" id="dropdown10-tab" data-toggle="tab" aria-controls="dropdown10">Affordability</a></li>
+                          </ul>
+                        </li>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+
+          <div class="row wow slideInLeft">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+              <div class="col-md-12">
+              <div class="panel panel-default">
+                <div id="collapseOne" class="panel-collapse collapse in bshadow" role="tabpanel" aria-labelledby="headingOne">
+                  <div class="panel-body">
+
+          <div id="myTabContent" class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+
+              <h1><b><center>
+                <br><br>
+                Your data review
+              </center></b></h1>
+              <h3><center>
+                Please go through the data in all the tabs to ensure that they have been filled correctly.
+              </center></h3>
+              <br><br><br>
+            </div>
+            <br>
+
+<!-- Basic details page !-->
+
+            <div role="tabpanel" class="tab-pane fade" id="dropdown1" aria-labelledby="profile-tab">
+              <h2><b>Your basic details</b></h2>
+              <br>
+              <div class="form-group col-md-2">
+                <label for="">Title</label>
+                <select disabled class="form-control" name="title" id="title">
+              <option>Please Select</option>
+              <option>Mr</option>
+              <option>Ms</option>
+              <option>Mrs</option>
+              <option>Mx</option>
+              <option>Other</option>
+            </select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="first_name">First name</label>
+                <input disabled type="text" class="form-control" name="first_name" id="first_name" placeholder="First name">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="initials">Initials</label>
+                <input disabled type="text" class="form-control" name="initials" id="initials" placeholder="Initials">
+              </div>
+              <div class="form-group col-md-3">
+                <label for="surname">Surname</label>
+                <input disabled type="text" class="form-control" name="surname" id="surname" placeholder="Surname">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="prefers">Prefers</label>
+                <input disabled type="text" class="form-control" name="prefers" id="prefers" placeholder="Prefers">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="sex">Sex</label>
+                <select disabled class="form-control" name="sex" id="sex">
+              <option>Please Select</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Trans</option>
+              <option>Other</option>
+            </select>
+              </div>
+              <div class="form-group col-md-3">
+                <label for="marital_status">Marital Status</label>
+                <select disabled class="form-control" name="marital_status" id="marital_status">
+              <option>Please Select</option>
+              <option>Single</option>
+              <option>Divorced</option>
+              <option>Married</option>
+              <option>Other</option>
+            </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="dob">Date of birth</label>
+                <input disabled type="Date" class="form-control" name="dob" id="dob" placeholder="D.O.B">
+              </div>
+            <div class="form-group col-md-3">
+              <label for="maiden_name">Maiden name</label>
+              <input disabled type="text" class="form-control"name="maiden_name" id="maiden_name" placeholder="Maiden name">
+            </div>
+            <div class="form-group col-md-2">
+              <label for="retire_age">Retire at age</label>
+              <input disabled type="number" class="form-control" name="retire_age" id="retire_age" placeholder="Retirement age">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="religious">Ethical/Religious beliefs that might affect financial planning?</label>
+              <input disabled type="text" class="form-control" name="religious" id="religious" placeholder="">
+            </div>
+            <div class="form-group col-md-6">
+              <label for="changes">Anticipated changes in next 5 years?</label>
+              <input disabled type="text" class="form-control" name="changes" id="changes" placeholder="">
+              <br>
+            </div>
+            </div>
+
+<!-- Tax details page !-->
+
+            <div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledby="profile-tab">
+              <h2><b>Your tax details</b></h2>
+              <br>
+              <div class="form-group col-md-6">
+                <label for="nationality">Nationality</label>
+                <select disabled class="form-control" name="nationality" id="nationality">
+              <option>Please Select</option>
+              <option value="AF">Afghanistan</option>
+              <option value="AX">Åland Islands</option>
+              <option value="AL">Albania</option>
+              <option value="DZ">Algeria</option>
+              <option value="AS">American Samoa</option>
+              <option value="AD">Andorra</option>
+              <option value="AO">Angola</option>
+              <option value="AI">Anguilla</option>
+              <option value="AQ">Antarctica</option>
+              <option value="AG">Antigua and Barbuda</option>
+              <option value="AR">Argentina</option>
+              <option value="AM">Armenia</option>
+              <option value="AW">Aruba</option>
+              <option value="AU">Australia</option>
+              <option value="AT">Austria</option>
+              <option value="AZ">Azerbaijan</option>
+              <option value="BS">Bahamas</option>
+              <option value="BH">Bahrain</option>
+              <option value="BD">Bangladesh</option>
+              <option value="BB">Barbados</option>
+              <option value="BY">Belarus</option>
+              <option value="BE">Belgium</option>
+              <option value="BZ">Belize</option>
+              <option value="BJ">Benin</option>
+              <option value="BM">Bermuda</option>
+              <option value="BT">Bhutan</option>
+              <option value="BO">Bolivia, Plurinational State of</option>
+              <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+              <option value="BA">Bosnia and Herzegovina</option>
+              <option value="BW">Botswana</option>
+              <option value="BV">Bouvet Island</option>
+              <option value="BR">Brazil</option>
+              <option value="IO">British Indian Ocean Territory</option>
+              <option value="BN">Brunei Darussalam</option>
+              <option value="BG">Bulgaria</option>
+              <option value="BF">Burkina Faso</option>
+              <option value="BI">Burundi</option>
+              <option value="KH">Cambodia</option>
+              <option value="CM">Cameroon</option>
+              <option value="CA">Canada</option>
+              <option value="CV">Cape Verde</option>
+              <option value="KY">Cayman Islands</option>
+              <option value="CF">Central African Republic</option>
+              <option value="TD">Chad</option>
+              <option value="CL">Chile</option>
+              <option value="CN">China</option>
+              <option value="CX">Christmas Island</option>
+              <option value="CC">Cocos (Keeling) Islands</option>
+              <option value="CO">Colombia</option>
+              <option value="KM">Comoros</option>
+              <option value="CG">Congo</option>
+              <option value="CD">Congo, the Democratic Republic of the</option>
+              <option value="CK">Cook Islands</option>
+              <option value="CR">Costa Rica</option>
+              <option value="CI">Côte d'Ivoire</option>
+              <option value="HR">Croatia</option>
+              <option value="CU">Cuba</option>
+              <option value="CW">Curaçao</option>
+              <option value="CY">Cyprus</option>
+              <option value="CZ">Czech Republic</option>
+              <option value="DK">Denmark</option>
+              <option value="DJ">Djibouti</option>
+              <option value="DM">Dominica</option>
+              <option value="DO">Dominican Republic</option>
+              <option value="EC">Ecuador</option>
+              <option value="EG">Egypt</option>
+              <option value="SV">El Salvador</option>
+              <option value="GQ">Equatorial Guinea</option>
+              <option value="ER">Eritrea</option>
+              <option value="EE">Estonia</option>
+              <option value="ET">Ethiopia</option>
+              <option value="FK">Falkland Islands (Malvinas)</option>
+              <option value="FO">Faroe Islands</option>
+              <option value="FJ">Fiji</option>
+              <option value="FI">Finland</option>
+              <option value="FR">France</option>
+              <option value="GF">French Guiana</option>
+              <option value="PF">French Polynesia</option>
+              <option value="TF">French Southern Territories</option>
+              <option value="GA">Gabon</option>
+              <option value="GM">Gambia</option>
+              <option value="GE">Georgia</option>
+              <option value="DE">Germany</option>
+              <option value="GH">Ghana</option>
+              <option value="GI">Gibraltar</option>
+              <option value="GR">Greece</option>
+              <option value="GL">Greenland</option>
+              <option value="GD">Grenada</option>
+              <option value="GP">Guadeloupe</option>
+              <option value="GU">Guam</option>
+              <option value="GT">Guatemala</option>
+              <option value="GG">Guernsey</option>
+              <option value="GN">Guinea</option>
+              <option value="GW">Guinea-Bissau</option>
+              <option value="GY">Guyana</option>
+              <option value="HT">Haiti</option>
+              <option value="HM">Heard Island and McDonald Islands</option>
+              <option value="VA">Holy See (Vatican City State)</option>
+              <option value="HN">Honduras</option>
+              <option value="HK">Hong Kong</option>
+              <option value="HU">Hungary</option>
+              <option value="IS">Iceland</option>
+              <option value="IN">India</option>
+              <option value="ID">Indonesia</option>
+              <option value="IR">Iran, Islamic Republic of</option>
+              <option value="IQ">Iraq</option>
+              <option value="IE">Ireland</option>
+              <option value="IM">Isle of Man</option>
+              <option value="IL">Israel</option>
+              <option value="IT">Italy</option>
+              <option value="JM">Jamaica</option>
+              <option value="JP">Japan</option>
+              <option value="JE">Jersey</option>
+              <option value="JO">Jordan</option>
+              <option value="KZ">Kazakhstan</option>
+              <option value="KE">Kenya</option>
+              <option value="KI">Kiribati</option>
+              <option value="KP">Korea, Democratic People's Republic of</option>
+              <option value="KR">Korea, Republic of</option>
+              <option value="KW">Kuwait</option>
+              <option value="KG">Kyrgyzstan</option>
+              <option value="LA">Lao People's Democratic Republic</option>
+              <option value="LV">Latvia</option>
+              <option value="LB">Lebanon</option>
+              <option value="LS">Lesotho</option>
+              <option value="LR">Liberia</option>
+              <option value="LY">Libya</option>
+              <option value="LI">Liechtenstein</option>
+              <option value="LT">Lithuania</option>
+              <option value="LU">Luxembourg</option>
+              <option value="MO">Macao</option>
+              <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+              <option value="MG">Madagascar</option>
+              <option value="MW">Malawi</option>
+              <option value="MY">Malaysia</option>
+              <option value="MV">Maldives</option>
+              <option value="ML">Mali</option>
+              <option value="MT">Malta</option>
+              <option value="MH">Marshall Islands</option>
+              <option value="MQ">Martinique</option>
+              <option value="MR">Mauritania</option>
+              <option value="MU">Mauritius</option>
+              <option value="YT">Mayotte</option>
+              <option value="MX">Mexico</option>
+              <option value="FM">Micronesia, Federated States of</option>
+              <option value="MD">Moldova, Republic of</option>
+              <option value="MC">Monaco</option>
+              <option value="MN">Mongolia</option>
+              <option value="ME">Montenegro</option>
+              <option value="MS">Montserrat</option>
+              <option value="MA">Morocco</option>
+              <option value="MZ">Mozambique</option>
+              <option value="MM">Myanmar</option>
+              <option value="NA">Namibia</option>
+              <option value="NR">Nauru</option>
+              <option value="NP">Nepal</option>
+              <option value="NL">Netherlands</option>
+              <option value="NC">New Caledonia</option>
+              <option value="NZ">New Zealand</option>
+              <option value="NI">Nicaragua</option>
+              <option value="NE">Niger</option>
+              <option value="NG">Nigeria</option>
+              <option value="NU">Niue</option>
+              <option value="NF">Norfolk Island</option>
+              <option value="MP">Northern Mariana Islands</option>
+              <option value="NO">Norway</option>
+              <option value="OM">Oman</option>
+              <option value="PK">Pakistan</option>
+              <option value="PW">Palau</option>
+              <option value="PS">Palestinian Territory, Occupied</option>
+              <option value="PA">Panama</option>
+              <option value="PG">Papua New Guinea</option>
+              <option value="PY">Paraguay</option>
+              <option value="PE">Peru</option>
+              <option value="PH">Philippines</option>
+              <option value="PN">Pitcairn</option>
+              <option value="PL">Poland</option>
+              <option value="PT">Portugal</option>
+              <option value="PR">Puerto Rico</option>
+              <option value="QA">Qatar</option>
+              <option value="RE">Réunion</option>
+              <option value="RO">Romania</option>
+              <option value="RU">Russian Federation</option>
+              <option value="RW">Rwanda</option>
+              <option value="BL">Saint Barthélemy</option>
+              <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+              <option value="KN">Saint Kitts and Nevis</option>
+              <option value="LC">Saint Lucia</option>
+              <option value="MF">Saint Martin (French part)</option>
+              <option value="PM">Saint Pierre and Miquelon</option>
+              <option value="VC">Saint Vincent and the Grenadines</option>
+              <option value="WS">Samoa</option>
+              <option value="SM">San Marino</option>
+              <option value="ST">Sao Tome and Principe</option>
+              <option value="SA">Saudi Arabia</option>
+              <option value="SN">Senegal</option>
+              <option value="RS">Serbia</option>
+              <option value="SC">Seychelles</option>
+              <option value="SL">Sierra Leone</option>
+              <option value="SG">Singapore</option>
+              <option value="SX">Sint Maarten (Dutch part)</option>
+              <option value="SK">Slovakia</option>
+              <option value="SI">Slovenia</option>
+              <option value="SB">Solomon Islands</option>
+              <option value="SO">Somalia</option>
+              <option value="ZA">South Africa</option>
+              <option value="GS">South Georgia and the South Sandwich Islands</option>
+              <option value="SS">South Sudan</option>
+              <option value="ES">Spain</option>
+              <option value="LK">Sri Lanka</option>
+              <option value="SD">Sudan</option>
+              <option value="SR">Suriname</option>
+              <option value="SJ">Svalbard and Jan Mayen</option>
+              <option value="SZ">Swaziland</option>
+              <option value="SE">Sweden</option>
+              <option value="CH">Switzerland</option>
+              <option value="SY">Syrian Arab Republic</option>
+              <option value="TW">Taiwan, Province of China</option>
+              <option value="TJ">Tajikistan</option>
+              <option value="TZ">Tanzania, United Republic of</option>
+              <option value="TH">Thailand</option>
+              <option value="TL">Timor-Leste</option>
+              <option value="TG">Togo</option>
+              <option value="TK">Tokelau</option>
+              <option value="TO">Tonga</option>
+              <option value="TT">Trinidad and Tobago</option>
+              <option value="TN">Tunisia</option>
+              <option value="TR">Turkey</option>
+              <option value="TM">Turkmenistan</option>
+              <option value="TC">Turks and Caicos Islands</option>
+              <option value="TV">Tuvalu</option>
+              <option value="UG">Uganda</option>
+              <option value="UA">Ukraine</option>
+              <option value="AE">United Arab Emirates</option>
+              <option value="GB">United Kingdom</option>
+              <option value="US">United States</option>
+              <option value="UM">United States Minor Outlying Islands</option>
+              <option value="UY">Uruguay</option>
+              <option value="UZ">Uzbekistan</option>
+              <option value="VU">Vanuatu</option>
+              <option value="VE">Venezuela, Bolivarian Republic of</option>
+              <option value="VN">Viet Nam</option>
+              <option value="VG">Virgin Islands, British</option>
+              <option value="VI">Virgin Islands, U.S.</option>
+              <option value="WF">Wallis and Futuna</option>
+              <option value="EH">Western Sahara</option>
+              <option value="YE">Yemen</option>
+              <option value="ZM">Zambia</option>
+              <option value="ZW">Zimbabwe</option>
+
+                </select>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="domicile">Domicile</label>
+                <select disabled class="form-control" name="domicile" id="domicile">
+              <option>Please Select</option>
+              <option value="AF">Afghanistan</option>
+              <option value="AX">Åland Islands</option>
+              <option value="AL">Albania</option>
+              <option value="DZ">Algeria</option>
+              <option value="AS">American Samoa</option>
+              <option value="AD">Andorra</option>
+              <option value="AO">Angola</option>
+              <option value="AI">Anguilla</option>
+              <option value="AQ">Antarctica</option>
+              <option value="AG">Antigua and Barbuda</option>
+              <option value="AR">Argentina</option>
+              <option value="AM">Armenia</option>
+              <option value="AW">Aruba</option>
+              <option value="AU">Australia</option>
+              <option value="AT">Austria</option>
+              <option value="AZ">Azerbaijan</option>
+              <option value="BS">Bahamas</option>
+              <option value="BH">Bahrain</option>
+              <option value="BD">Bangladesh</option>
+              <option value="BB">Barbados</option>
+              <option value="BY">Belarus</option>
+              <option value="BE">Belgium</option>
+              <option value="BZ">Belize</option>
+              <option value="BJ">Benin</option>
+              <option value="BM">Bermuda</option>
+              <option value="BT">Bhutan</option>
+              <option value="BO">Bolivia, Plurinational State of</option>
+              <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+              <option value="BA">Bosnia and Herzegovina</option>
+              <option value="BW">Botswana</option>
+              <option value="BV">Bouvet Island</option>
+              <option value="BR">Brazil</option>
+              <option value="IO">British Indian Ocean Territory</option>
+              <option value="BN">Brunei Darussalam</option>
+              <option value="BG">Bulgaria</option>
+              <option value="BF">Burkina Faso</option>
+              <option value="BI">Burundi</option>
+              <option value="KH">Cambodia</option>
+              <option value="CM">Cameroon</option>
+              <option value="CA">Canada</option>
+              <option value="CV">Cape Verde</option>
+              <option value="KY">Cayman Islands</option>
+              <option value="CF">Central African Republic</option>
+              <option value="TD">Chad</option>
+              <option value="CL">Chile</option>
+              <option value="CN">China</option>
+              <option value="CX">Christmas Island</option>
+              <option value="CC">Cocos (Keeling) Islands</option>
+              <option value="CO">Colombia</option>
+              <option value="KM">Comoros</option>
+              <option value="CG">Congo</option>
+              <option value="CD">Congo, the Democratic Republic of the</option>
+              <option value="CK">Cook Islands</option>
+              <option value="CR">Costa Rica</option>
+              <option value="CI">Côte d'Ivoire</option>
+              <option value="HR">Croatia</option>
+              <option value="CU">Cuba</option>
+              <option value="CW">Curaçao</option>
+              <option value="CY">Cyprus</option>
+              <option value="CZ">Czech Republic</option>
+              <option value="DK">Denmark</option>
+              <option value="DJ">Djibouti</option>
+              <option value="DM">Dominica</option>
+              <option value="DO">Dominican Republic</option>
+              <option value="EC">Ecuador</option>
+              <option value="EG">Egypt</option>
+              <option value="SV">El Salvador</option>
+              <option value="GQ">Equatorial Guinea</option>
+              <option value="ER">Eritrea</option>
+              <option value="EE">Estonia</option>
+              <option value="ET">Ethiopia</option>
+              <option value="FK">Falkland Islands (Malvinas)</option>
+              <option value="FO">Faroe Islands</option>
+              <option value="FJ">Fiji</option>
+              <option value="FI">Finland</option>
+              <option value="FR">France</option>
+              <option value="GF">French Guiana</option>
+              <option value="PF">French Polynesia</option>
+              <option value="TF">French Southern Territories</option>
+              <option value="GA">Gabon</option>
+              <option value="GM">Gambia</option>
+              <option value="GE">Georgia</option>
+              <option value="DE">Germany</option>
+              <option value="GH">Ghana</option>
+              <option value="GI">Gibraltar</option>
+              <option value="GR">Greece</option>
+              <option value="GL">Greenland</option>
+              <option value="GD">Grenada</option>
+              <option value="GP">Guadeloupe</option>
+              <option value="GU">Guam</option>
+              <option value="GT">Guatemala</option>
+              <option value="GG">Guernsey</option>
+              <option value="GN">Guinea</option>
+              <option value="GW">Guinea-Bissau</option>
+              <option value="GY">Guyana</option>
+              <option value="HT">Haiti</option>
+              <option value="HM">Heard Island and McDonald Islands</option>
+              <option value="VA">Holy See (Vatican City State)</option>
+              <option value="HN">Honduras</option>
+              <option value="HK">Hong Kong</option>
+              <option value="HU">Hungary</option>
+              <option value="IS">Iceland</option>
+              <option value="IN">India</option>
+              <option value="ID">Indonesia</option>
+              <option value="IR">Iran, Islamic Republic of</option>
+              <option value="IQ">Iraq</option>
+              <option value="IE">Ireland</option>
+              <option value="IM">Isle of Man</option>
+              <option value="IL">Israel</option>
+              <option value="IT">Italy</option>
+              <option value="JM">Jamaica</option>
+              <option value="JP">Japan</option>
+              <option value="JE">Jersey</option>
+              <option value="JO">Jordan</option>
+              <option value="KZ">Kazakhstan</option>
+              <option value="KE">Kenya</option>
+              <option value="KI">Kiribati</option>
+              <option value="KP">Korea, Democratic People's Republic of</option>
+              <option value="KR">Korea, Republic of</option>
+              <option value="KW">Kuwait</option>
+              <option value="KG">Kyrgyzstan</option>
+              <option value="LA">Lao People's Democratic Republic</option>
+              <option value="LV">Latvia</option>
+              <option value="LB">Lebanon</option>
+              <option value="LS">Lesotho</option>
+              <option value="LR">Liberia</option>
+              <option value="LY">Libya</option>
+              <option value="LI">Liechtenstein</option>
+              <option value="LT">Lithuania</option>
+              <option value="LU">Luxembourg</option>
+              <option value="MO">Macao</option>
+              <option value="MK">Macedonia, the former Yugoslav Republic of</option>
+              <option value="MG">Madagascar</option>
+              <option value="MW">Malawi</option>
+              <option value="MY">Malaysia</option>
+              <option value="MV">Maldives</option>
+              <option value="ML">Mali</option>
+              <option value="MT">Malta</option>
+              <option value="MH">Marshall Islands</option>
+              <option value="MQ">Martinique</option>
+              <option value="MR">Mauritania</option>
+              <option value="MU">Mauritius</option>
+              <option value="YT">Mayotte</option>
+              <option value="MX">Mexico</option>
+              <option value="FM">Micronesia, Federated States of</option>
+              <option value="MD">Moldova, Republic of</option>
+              <option value="MC">Monaco</option>
+              <option value="MN">Mongolia</option>
+              <option value="ME">Montenegro</option>
+              <option value="MS">Montserrat</option>
+              <option value="MA">Morocco</option>
+              <option value="MZ">Mozambique</option>
+              <option value="MM">Myanmar</option>
+              <option value="NA">Namibia</option>
+              <option value="NR">Nauru</option>
+              <option value="NP">Nepal</option>
+              <option value="NL">Netherlands</option>
+              <option value="NC">New Caledonia</option>
+              <option value="NZ">New Zealand</option>
+              <option value="NI">Nicaragua</option>
+              <option value="NE">Niger</option>
+              <option value="NG">Nigeria</option>
+              <option value="NU">Niue</option>
+              <option value="NF">Norfolk Island</option>
+              <option value="MP">Northern Mariana Islands</option>
+              <option value="NO">Norway</option>
+              <option value="OM">Oman</option>
+              <option value="PK">Pakistan</option>
+              <option value="PW">Palau</option>
+              <option value="PS">Palestinian Territory, Occupied</option>
+              <option value="PA">Panama</option>
+              <option value="PG">Papua New Guinea</option>
+              <option value="PY">Paraguay</option>
+              <option value="PE">Peru</option>
+              <option value="PH">Philippines</option>
+              <option value="PN">Pitcairn</option>
+              <option value="PL">Poland</option>
+              <option value="PT">Portugal</option>
+              <option value="PR">Puerto Rico</option>
+              <option value="QA">Qatar</option>
+              <option value="RE">Réunion</option>
+              <option value="RO">Romania</option>
+              <option value="RU">Russian Federation</option>
+              <option value="RW">Rwanda</option>
+              <option value="BL">Saint Barthélemy</option>
+              <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+              <option value="KN">Saint Kitts and Nevis</option>
+              <option value="LC">Saint Lucia</option>
+              <option value="MF">Saint Martin (French part)</option>
+              <option value="PM">Saint Pierre and Miquelon</option>
+              <option value="VC">Saint Vincent and the Grenadines</option>
+              <option value="WS">Samoa</option>
+              <option value="SM">San Marino</option>
+              <option value="ST">Sao Tome and Principe</option>
+              <option value="SA">Saudi Arabia</option>
+              <option value="SN">Senegal</option>
+              <option value="RS">Serbia</option>
+              <option value="SC">Seychelles</option>
+              <option value="SL">Sierra Leone</option>
+              <option value="SG">Singapore</option>
+              <option value="SX">Sint Maarten (Dutch part)</option>
+              <option value="SK">Slovakia</option>
+              <option value="SI">Slovenia</option>
+              <option value="SB">Solomon Islands</option>
+              <option value="SO">Somalia</option>
+              <option value="ZA">South Africa</option>
+              <option value="GS">South Georgia and the South Sandwich Islands</option>
+              <option value="SS">South Sudan</option>
+              <option value="ES">Spain</option>
+              <option value="LK">Sri Lanka</option>
+              <option value="SD">Sudan</option>
+              <option value="SR">Suriname</option>
+              <option value="SJ">Svalbard and Jan Mayen</option>
+              <option value="SZ">Swaziland</option>
+              <option value="SE">Sweden</option>
+              <option value="CH">Switzerland</option>
+              <option value="SY">Syrian Arab Republic</option>
+              <option value="TW">Taiwan, Province of China</option>
+              <option value="TJ">Tajikistan</option>
+              <option value="TZ">Tanzania, United Republic of</option>
+              <option value="TH">Thailand</option>
+              <option value="TL">Timor-Leste</option>
+              <option value="TG">Togo</option>
+              <option value="TK">Tokelau</option>
+              <option value="TO">Tonga</option>
+              <option value="TT">Trinidad and Tobago</option>
+              <option value="TN">Tunisia</option>
+              <option value="TR">Turkey</option>
+              <option value="TM">Turkmenistan</option>
+              <option value="TC">Turks and Caicos Islands</option>
+              <option value="TV">Tuvalu</option>
+              <option value="UG">Uganda</option>
+              <option value="UA">Ukraine</option>
+              <option value="AE">United Arab Emirates</option>
+              <option value="GB">United Kingdom</option>
+              <option value="US">United States</option>
+              <option value="UM">United States Minor Outlying Islands</option>
+              <option value="UY">Uruguay</option>
+              <option value="UZ">Uzbekistan</option>
+              <option value="VU">Vanuatu</option>
+              <option value="VE">Venezuela, Bolivarian Republic of</option>
+              <option value="VN">Viet Nam</option>
+              <option value="VG">Virgin Islands, British</option>
+              <option value="VI">Virgin Islands, U.S.</option>
+              <option value="WF">Wallis and Futuna</option>
+              <option value="EH">Western Sahara</option>
+              <option value="YE">Yemen</option>
+              <option value="ZM">Zambia</option>
+              <option value="ZW">Zimbabwe</option>
+
+                </select>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="uk_res">Are you a UK resident?</label>
+                <select disabled class="form-control" name="uk_res" id="uk_res">
+              <option>Please Select</option>
+              <option>Yes</option>
+              <option>No</option>
+              </select>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="tax_payer">Are you a UK Tax Payer?</label>
+                <select disabled class="form-control"  name="tax_payer"id="tax_payer">
+              <option>Please Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="live_abroad">Do you intend to live abroad in the next 5 years?</label>
+                <select disabled class="form-control" name="live_abroad" id="live_abroad">
+              <option>Please Select</option>
+              <option>Yes</option>
+              <option>No</option>
+              </select>
+              </div>
+
+              <div class="form-group col-md-6"> <!-- this gets the design from the bootstrap external css file -->
+                <label for="NINO">Please enter your National Insurance Number:</label> <!-- this makes the form item for first address -->
+                <input disabled type="text" class="form-control" name="NINO" id="NINO" placeholder="">
+              </div>
+
+            <h4><i>Non-editable Fields:</i> </h4>
+            <div class="form-group col-md-4">
+              <label for="2">Tax Ref</label>
+              <input disabled type="text" class="form-control" id="2" readonly="true" value ="10 digit or PAYE" placeholder="" value="" disabled >
+            </div>
+            <div class="form-group col-md-4">
+              <label for="2">Tax Office</label>
+              <input disabled type="Text" class="form-control" id="2" readonly="true" value ="99999" placeholder="" disabled >
+            </div>
+            <div class="form-group col-md-4">
+              <label for="2">Paye Ref 1</label>
+              <input disabled type="Text" class="form-control" id="2"readonly="true" value ="123/456789000" placeholder="" disabled >
+            </div>
+            <div class="form-group col-md-4">
+              <label for="2">Paye Ref 2</label>
+              <input disabled type="Text" class="form-control" id="2"readonly="true" value ="123/4567836500" placeholder="" disabled >
+            </div>
+            <div class="form-group col-md-4">
+              <label for="2">NI years earned</label>
+              <input disabled type="Text" class="form-control" id="2"readonly="true" value ="22" placeholder="" disabled >
+            </div>
+            <div class="form-group col-md-4">
+              <label for="2">State Pension Age</label>
+              <input disabled type="Text" class="form-control" id="2"readonly="true" value ="68" placeholder="" disabled >
+                          <br>
+            </div>
+            </div>
+
+<!-- Health details page !-->
+
+            <div role="tabpanel" class="tab-pane fade" id="dropdown3" aria-labelledby="profile-tab">
+              <h2><b>Your health details</b></h2>
+              <br>
+              <div class="form-group col-md-6">
+              <label for="formGroupExampleInput">How would you rate your health?</label>
+              <select disabled class="form-control" name="health_state" id="health_state" Required>
+                <option selected="selected" disabled="true" value="">Please Select</option>
+                <option value="one">Good</option>
+                <option value="two">Fair</option>
+                <option value="three">Poor</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="formGroupExampleInput">Are you a smoker?</label>
+              <select disabled class="form-control" name="smoker" id="smoker" Required>
+                <option selected="selected" disabled="true" value="">Please Select</option>
+                <option value="one">Yes</option>
+                <option value="two">No</option>
+              </select>
+            </div>
+
+            <div id="yes_smoker" style="display:none;" class="form-group col-md-6">
+              <label>How many cigarettes do you smoke per day?</label>
+              <input disabled class="form-control" type="number" name="cigarette_number" id="cigarette_number" placeholder="How many?"/>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="formGroupExampleInput">Are you a drinker?</label>
+              <select disabled class="form-control" name="drinker" id="drinker" Required>
+                <option selected="selected" disabled="true" value="">Please Select</option>
+                <option value="one">Yes</option>
+                <option value="two">No</option>
+              </select>
+            </div>
+
+            <div id="yes_drinker" style="display:none;" class="form-group col-md-6">
+              <label>How many units do you drink per week?</label>
+              <input disabled class="form-control" type="number" name="drinking_unit" id="drinking_unit" placeholder="How many?"/>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label id="height" for="formGroupExampleInput">How tall are you?</label>
+              <input disabled class="form-control" type="text" name="height_feet_inches" id="height_feet_inches" placeholder="Feet / Inches" Required </input>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label id="weight" for="formGroupExampleInput">How much do you weigh?</label>
+              <input disabled class="form-control" type="text" name="specify_st_lb" id="specify_st_lb" placeholder="st / lb" Required </input>
+              <br>
+              <input disabled class="form-control" type="text" name="specify_kg" id="specify_kg" placeholder="kg" Required </input>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="formGroupExampleInput">Are you involved in any hazardous pastimes,
+            (e.g. sky diving, rock climbing, BASE jumping, etc?)</label>
+              <select disabled class="form-control" name="hazard_pastime" id="hazard_pastime" Required>
+                <option selected="selected" disabled="true" value="">Please Select</option>
+                <option value="one">Yes</option>
+                <option value="two">No</option>
+              </select>
+            </div>
+
+            <div id="yes_pastime" style="display:none;" class="form-group col-md-6">
+              <label>Specify what pastimes you engage in:</label>
+              <input disabled class="form-control" type="text" name="specify_hazard" id="specify_hazard" placeholder="Please enter your hazardous pastime activities"/>
+            </div>
+
+            <br>
+
+            <div class="form-group col-md-6">
+              <label for="formGroupExampleInput">Are you aware of any health conditions that might affect current
+                or future financial advice and insurance considerations?</b></label>
+              <select disabled class="form-control" name="health_issues" id="health_issues" Required>
+                <option selected="selected" disabled="true" value="">Please Select</option>
+                <option value="one">Yes</option>
+                <option value="two">No</option>
+              </select>
+            </div>
+
+            <div id="yes_issues" style="display:none;" class="form-group col-md-6">
+              <label>Please state the health condition(s) that you are aware of:</label>
+              <input disabled class="form-control" type="text" name="specify_health_issues" id="specify_health_issues" placeholder="please enter health issue(s)"/>
+                        <br>
+            </div>
+            </div>
+
+<!-- Occupation details page !-->
+
+            <div role="tabpanel" class="tab-pane fade" id="dropdown4" aria-labelledby="profile-tab">
+              <h2><b>Your occupation details</b></h2>
+              <br>
+              <div class="form-group col-md-3">
+                  <label for="employment_status">Employment status</label>
+                  <select disabled class="form-control" name="employment_status" id="employment_status">
+                  <option>Please Select</option>
+                  <option>Part-time</option>
+                  <option>Full-time</option>
+                  <option>Self employed</option>
+                  <option>Unemployed</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                  <label for="self_employed">If self employed</label>
+                  <input disabled type="text" class="form-control" name ="self_employed" id="self_employed" placeholder="sole proprietor, partnership or company?">
+              </div>
+              <div class="form-group col-md-2">
+                  <label for="employer">Employer</label>
+                  <input disabled type="text" class="form-control" name="employer" id="employer" placeholder="Employer Name">
+              </div>
+              <div class="form-group col-md-3">
+                  <label for="date_joined">Date Joined Company</label>
+                  <input disabled type="text" class="form-control" name="date_joined" id="date_joined" placeholder="DD/MM/YYYY">
+              </div>
+              <div class="form-group col-md-3">
+                  <label for="ideal_ret_age">Ideal retirement age</label>
+                  <input disabled type="number" class="form-control" name="ideal_ret_age" id="ideal_ret_age" placeholder="What age do you want to retire at?">
+              </div>
+              <div class="form-group col-md-4">
+                  <label for="leaving_soon">Will you be leaving your current employment soon?</label>
+                  <select disabled class="form-control" name="leaving_soon" id="leaving_soon">
+                  <option>Please Select</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+              <div class="form-group col-md-3">
+
+                  <label for="finish_date">If yes, what date will you finish?</label>
+                  <input disabled type="text" class="form-control" name="finish_date" id="finish_date" placeholder="DD/MM/YYYY">
+              </div>
+              <div class="form-group col-md-2">
+                  <label for="ret_age">Retirement age</label>
+                  <input disabled type="number" class="form-control" name="ret_age" id="ret_age" placeholder="Retirement age">
+              </div>
+              <div class="form-group col-md-3">
+                  <label for="leaving_reason">What is the reason you're leaving?</label>
+                  <input disabled type="text" class="form-control" name="leaving_reason" id="leaving_reason" placeholder="e.g. retrenchment, resignation, retirement">
+              </div>
+              <div class="form-group col-md-4">
+                  <label for="return_date">Do you intend to return to employment? If so, when?</label>
+                  <input disabled type="text" class="form-control" name="return_date" id="return_date" placeholder="DD/MM/YYYY">
+              </div>
+              <h3><i> Qualifications</i> </h3>
+              <div class="form-group col-md-3">
+                  <label for="gcse">GCSE's</label>
+                  <input disabled type="text" class="form-control" name="gcse" id="gcse" placeholder="GCSE's">
+              </div>
+              <div class="form-group col-md-3">
+                  <label for="alevel_btec">A level/BTEC</label>
+                  <input disabled type="text" class="form-control" name="alevel_btec" id="alevel_btec" placeholder="A levels/BTEC">
+              </div>
+              <div class="form-group col-md-6">
+                  <label for="other">Other</label>
+                  <input disabled type="text" class="form-control" name="other" id="other" placeholder="Other Qualifications">
+                          <br>
+              </div>
+              </div>
+
+              <script>
+              $('#health_issues').on('change',function(){ // function for health conditions
+                  if( $(this).val()==="one"){
+                  $("#yes_issues").show() // shows fields to specify health condition(s) if 'yes' is selected
+                  }
+                  else{
+                  $("#yes_issues").hide() // hides fields to specify health condition(s)
+                  }
+              });
+              </script>
+
+              <script>
+              $('#hazard_pastime').on('change',function(){ // function for hazardous activities
+                  if( $(this).val()==="one"){
+                  $("#yes_pastime").show() // shows fields to specify hazardous activities if 'yes' is selected
+                  }
+                  else{
+                  $("#yes_pastime").hide() // hides fields to specify hazardous activites
+                  }
+              });
+              </script>
+
+              <script>
+              $('#smoker').on('change',function(){ // function  for cigarettes smoked
+                  if( $(this).val()==="one"){
+                  $("#yes_smoker").show() // shows field to specify number of cigarettes smoked
+                  }
+                  else{
+                  $("#yes_smoker").hide() // hides fields to specify number of cigarettes smoked
+                  }
+              });
+              </script>
+
+              <script>
+              $('#drinker').on('change',function(){ // function for drinking habits
+                  if( $(this).val()==="one"){
+                  $("#yes_drinker").show() // shows fields to specify amount drunk per week
+                  }
+                  else{
+                  $("#yes_drinker").hide() // hides field if 'no'
+                  }
+              });
+            </script>
+
+<!-- Dependents details page !-->
+
+            <div role="tabpanel" class="tab-pane fade" id="dropdown5" aria-labelledby="profile-tab">
+              <h2><b>Your dependents details</b></h2>
+              <br>
+                <div class="col-xs-12">
+                <label class="checkbox-inline">
+                   <input disabled type="checkbox" class="faChkRnd" onclick="javascript:yesnoChild();" name="yesno" id="childCheck"><span style="padding-left:10px;"> Children</span>
+                 </label>
+
+                 <label class="checkbox-inline">
+                    <input disabled type="checkbox" class="faChkRnd"  onclick="javascript:yesnoGrandChild();" name="yesno" id="grandChildCheck"><span style="padding-left:10px;">Grand Children</span>
+                 </label>
+
+                 <label class="checkbox-inline">
+                    <input disabled type="checkbox" class="faChkRnd"  onclick="javascript:yesnoParent();" name="yesno" id="parentCheck"><span style="padding-left:10px;">Parent</span>
+                 </label>
+
+                 <label class="checkbox-inline">
+                    <input disabled type="checkbox" class="faChkRnd"  onclick="javascript:yesnoOther();" name="yesno" id="otherCheck"><span style="padding-left:10px;">Other</span>
+                 </label>
+              </div>
+
+
+                <div id="childYes" style="display:none" class="form-group col-md-3">
+                  <label for="formGroupExampleInput">  How many children?</label>
+                  <input disabled type='number' class="form-control" id='childNumber' min="0" max="10" name='yes'><br>
+                </div>
+
+                    <div id="grandChildYes" style="display:none" class="form-group col-md-3">
+                      <label for="formGroupExampleInput">  How many Grand children?</label>
+                         <input disabled type='number' class="form-control" id='grandchildNumber' min="0" max="10" name='yes'><br>
+                  </div>
+
+                          <div id="ParentYes" style="display:none" class="form-group col-md-3">
+                            <label for="formGroupExampleInput">  How many Parents?</label>
+                               <input disabled type='number' class="form-control" id='parentNumber' min="0" max="4" name='yes'><br>
+                        </div>
+
+                                      <div id="OtherYes" style="display:none" class="form-group col-md-3">
+                                        <label for="formGroupExampleInput">  How many others?</label>
+                                           <input disabled type='number' class="form-control" id='otherNumber' min="0" max="4" name='yes'><br>
+                                    </div>
+
+
+                                    <div id="childTable" style="display:none;" class="col-xs-12">
+                                      <h2 class="text-centered">Children</h2>
+              <div class="row col-xs-12">
+
+              <!--Child 1 Form -->
+
+              <h3>Child 1</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--Child 2 Form -->
+                        <div class="row col-xs-12" id="child2" style="display:none;">
+                        <h3>Child 2</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                    </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--Child 3 Form -->
+                        <div class="row col-xs-12" id="child3" style="display:none;">
+                        <h3>Child 3</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                    </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--Child 4 Form -->
+                        <div class="row col-xs-12" id="child4" style="display:none;">
+                        <h3>Child 4</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--Child 5 Form -->
+                        <div class="row col-xs-12" id="child5" style="display:none;">
+                        <h3>Child 5</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--Child 6 Form -->
+                        <div class="row col-xs-12" id="child6" style="display:none;">
+                        <h3>Child 6</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--Child 7 Form -->
+                        <div class="row col-xs-12" id="child7" style="display:none;">
+                        <h3>Child 7</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--Child 8 Form -->
+                        <div class="row col-xs-12" id="child8" style="display:none;">
+                        <h3>Child 8</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--Child 9 Form -->
+                        <div class="row col-xs-12" id="child9" style="display:none;">
+                        <h3>Child 9</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--Child 10 Form -->
+                        <div class="row col-xs-12" id="child10" style="display:none;">
+                        <h3>Child 10</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+                        </div>
+                        <!--End of child forms -->
+
+                        <!-- Begining of Grand child forms -->
+                        <div id="grandchildTable" style="display:none;" class="col-xs-12">
+                        <h2>GrandChildren</h2>
+                        <div class="row col-xs-12">
+
+                        <!--Grand Child 1 Form -->
+
+
+                        <h3>grandchild 1</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--grandchild 2 Form -->
+                        <div class="row col-xs-12" id="grandchild2" style="display:none;">
+                        <h3>grandchild 2</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--grandchild 3 Form -->
+                        <div class="row col-xs-12" id="grandchild3" style="display:none;">
+                        <h3>grandchild 3</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--grandchild 4 Form -->
+                        <div class="row col-xs-12" id="grandchild4" style="display:none;">
+                        <h3>grandchild 4</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--grandchild 5 Form -->
+                        <div class="row col-xs-12" id="grandchild5" style="display:none;">
+                        <h3>grandchild 5</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--grandchild 6 Form -->
+                        <div class="row col-xs-12" id="grandchild6" style="display:none;">
+                        <h3>grandchild 6</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--grandchild 7 Form -->
+                        <div class="row col-xs-12" id="grandchild7" style="display:none;">
+                        <h3>grandchild 7</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--grandchild 8 Form -->
+                        <div class="row col-xs-12" id="grandchild8" style="display:none;">
+                        <h3>grandchild 8</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--grandchild 9 Form -->
+                        <div class="row col-xs-12" id="grandchild9" style="display:none;">
+                        <h3>grandchild 9</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--grandchild 10 Form -->
+                        <div class="row col-xs-12" id="grandchild10" style="display:none;">
+                        <h3>grandchild 10</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+                        </div>
+
+                        <!-- End of Grand child forms -->
+
+                        <!-- Begining of Parent forms -->
+
+                        <div id="parentTable" style="display:none;" class="col-xs-12">
+                        <h2>parent</h2>
+                        <div class="row col-xs-12">
+
+                        <!--Grand Child 1 Form -->
+
+                        <h3>parent 1</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--parent 2 Form -->
+                        <div class="row col-xs-12" id="parent2" style="display:none;">
+                        <h3>parent 2</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--parent 3 Form -->
+                        <div class="row col-xs-12" id="parent3" style="display:none;">
+                        <h3>parent 3</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--parent 4 Form -->
+                        <div class="row col-xs-12" id="parent4" style="display:none;">
+                        <h3>parent 4</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+                        </div>
+
+                        <!-- End of Parent forms -->
+
+                        <!-- Begining of Other forms -->
+
+                        <div id="otherTable" style="display:none;" class="col-xs-12">
+                        <h2>other</h2>
+                        <div class="row col-xs-12">
+
+                        <!--Grand Child 1 Form -->
+
+
+                        <h3>other 1</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--other 2 Form -->
+                        <div class="row col-xs-12" id="other2" style="display:none;">
+                        <h3>other 2</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--other 3 Form -->
+                        <div class="row col-xs-12" id="other3" style="display:none;">
+                        <h3>other 3</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+
+                        <!--other 4 Form -->
+                        <div class="row col-xs-12" id="other4" style="display:none;">
+                        <h3>other 4</h3>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Title</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Mr</option>
+                        <option>Ms</option>
+                        <option>Mrs</option>
+                        <option>Mx</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">First name</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Initials</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Surname</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Prefers</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers" required pattern="[a-zA-Z]*">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">Sex</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Trans</option>
+                        <option>Other</option>
+                      </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Date of birth</label>
+                          <input disabled type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput2">Relationship</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Relationship">
+                        </div>
+                        <div class="form-group col-md-2">
+                          <label for="formGroupExampleInput">financially dependent</label>
+                          <select disabled class="form-control">
+                        <option>Please Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                      </select>
+                          </div>
+                        <div class="form-group col-md-6">
+                          <label for="formGroupExampleInput2">Notes</label>
+                          <input disabled type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notes">
+                        </div>
+                        </div>
+                        <!-- End of Other forms -->
+                      </div>
+                    </div>
+
+                    <!-- End Modal -->
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/core.js"></script>
+
+                      <script type="text/javascript">
+
+                    // If children checkbox selected show number of children box
+                      function yesnoChild() {
+                          if (document.getElementById('childCheck').checked) {
+                              document.getElementById('childYes').style.display = 'block';
+                          }
+                          else document.getElementById('childYes').style.display = 'none';
+                      }
+
+                    // If Grand children checkbox selected show number of Grand children box
+                      function yesnoGrandChild() {
+                          if (document.getElementById('grandChildCheck').checked) {
+                              document.getElementById('grandChildYes').style.display = 'block';
+                          }
+                          else document.getElementById('grandChildYes').style.display = 'none';
+                      }
+
+                    // If Parents checkbox selected show number of parents box
+                      function yesnoParent() {
+                          if (document.getElementById('parentCheck').checked) {
+                              document.getElementById('ParentYes').style.display = 'block';
+                          }
+                          else document.getElementById('ParentYes').style.display = 'none';
+                      }
+
+                    // If Other checkbox selected show number of other box
+                      function yesnoOther() {
+                          if (document.getElementById('otherCheck').checked) {
+                              document.getElementById('OtherYes').style.display = 'block';
+                          }
+                          else document.getElementById('OtherYes').style.display = 'none';
+                      }
+
+                    //jquery for form section loading
+                      $(document).ready(function() {
+                    // If number of children Contains a value show children section
+                    $("#childNumber").keyup(function() {
+                      if (this.value != "") {
+                          $("#childTable").css("display", "block");
+                      }
+                      else {
+                          $("#childTable").css("display", "none");
+                      }
+                    });
+
+                    // If number of children Contains a value over 1 show children section 2
+                    $("#childNumber").keyup(function() {
+                      if (this.value > 1) {
+                          $("#child2").css("display", "block");
+                      }
+                      else {
+                          $("#child2").css("display", "none");
+                      }
+                    });
+
+                    // If number of children Contains a value over 2 show children section 3
+                    $("#childNumber").keyup(function() {
+                      if (this.value > 2) {
+                          $("#child3").css("display", "block");
+                      }
+                      else {
+                          $("#child3").css("display", "none");
+                      }
+                    });
+
+                    // If number of children Contains a value over 3 show children section 4
+                    $("#childNumber").keyup(function() {
+                      if (this.value > 3) {
+                          $("#child4").css("display", "block");
+                      }
+                      else {
+                          $("#child4").css("display", "none");
+                      }
+                    });
+
+                    // If number of children Contains a value over 4 show children section 5
+                    $("#childNumber").keyup(function() {
+                      if (this.value > 4) {
+                          $("#child5").css("display", "block");
+                      }
+                      else {
+                          $("#child5").css("display", "none");
+                      }
+                    });
+
+                    // If number of children Contains a value over 5 show children section 6
+                    $("#childNumber").keyup(function() {
+                      if (this.value > 5) {
+                          $("#child6").css("display", "block");
+                      }
+                      else {
+                          $("#child6").css("display", "none");
+                      }
+                    });
+
+                    // If number of children Contains a value over 6 show children section 7
+                    $("#childNumber").keyup(function() {
+                      if (this.value > 6) {
+                          $("#child7").css("display", "block");
+                      }
+                      else {
+                          $("#child7").css("display", "none");
+                      }
+                    });
+
+                    // If number of children Contains a value over 7 show children section 8
+                    $("#childNumber").keyup(function() {
+                      if (this.value > 7) {
+                          $("#child8").css("display", "block");
+                      }
+                      else {
+                          $("#child8").css("display", "none");
+                      }
+                    });
+
+                    // If number of children Contains a value over 8 show children section 9
+                    $("#childNumber").keyup(function() {
+                      if (this.value > 8) {
+                          $("#child9").css("display", "block");
+                      }
+                      else {
+                          $("#child9").css("display", "none");
+                      }
+                    });
+
+                    // If number of children Contains a value over 9 show children section 10
+                    $("#childNumber").keyup(function() {
+                      if (this.value > 9) {
+                          $("#child10").css("display", "block");
+                      }
+                      else {
+                          $("#child10").css("display", "none");
+                      }
+                    });
+                    });
+
+                    //jquery for form section loading
+                      $(document).ready(function() {
+                    // If number of grandchildren Contains a value show grandchildren section
+                    $("#grandchildNumber").keyup(function() {
+                      if (this.value != "") {
+                          $("#grandchildTable").css("display", "block");
+                      }
+                      else {
+                          $("#grandchildTable").css("display", "none");
+                      }
+                    });
+
+                    // If number of grandchildren Contains a value over 1 show grandchildren section 2
+                    $("#grandchildNumber").keyup(function() {
+                      if (this.value > 1) {
+                          $("#grandchild2").css("display", "block");
+                      }
+                      else {
+                          $("#grandchild2").css("display", "none");
+                      }
+                    });
+
+                    // If number of grandchildren Contains a value over 2 show grandchildren section 3
+                    $("#grandchildNumber").keyup(function() {
+                      if (this.value > 2) {
+                          $("#grandchild3").css("display", "block");
+                      }
+                      else {
+                          $("#grandchild3").css("display", "none");
+                      }
+                    });
+
+                    // If number of grandchildren Contains a value over 3 show grandchildren section 4
+                    $("#grandchildNumber").keyup(function() {
+                      if (this.value > 3) {
+                          $("#grandchild4").css("display", "block");
+                      }
+                      else {
+                          $("#grandchild4").css("display", "none");
+                      }
+                    });
+
+                    // If number of grandchildren Contains a value over 4 show grandchildren section 5
+                    $("#grandchildNumber").keyup(function() {
+                      if (this.value > 4) {
+                          $("#grandchild5").css("display", "block");
+                      }
+                      else {
+                          $("#grandchild5").css("display", "none");
+                      }
+                    });
+
+                    // If number of grandchildren Contains a value over 5 show grandchildren section 6
+                    $("#grandchildNumber").keyup(function() {
+                      if (this.value > 5) {
+                          $("#grandchild6").css("display", "block");
+                      }
+                      else {
+                          $("#grandchild6").css("display", "none");
+                      }
+                    });
+
+                    // If number of grandchildren Contains a value over 6 show grandchildren section 7
+                    $("#grandchildNumber").keyup(function() {
+                      if (this.value > 6) {
+                          $("#grandchild7").css("display", "block");
+                      }
+                      else {
+                          $("#grandchild7").css("display", "none");
+                      }
+                    });
+
+                    // If number of grandchildren Contains a value over 7 show grandchildren section 8
+                    $("#grandchildNumber").keyup(function() {
+                      if (this.value > 7) {
+                          $("#grandchild8").css("display", "block");
+                      }
+                      else {
+                          $("#grandchild8").css("display", "none");
+                      }
+                    });
+
+                    // If number of grandchildren Contains a value over 8 show grandchildren section 9
+                    $("#grandchildNumber").keyup(function() {
+                      if (this.value > 8) {
+                          $("#grandchild9").css("display", "block");
+                      }
+                      else {
+                          $("#grandchild9").css("display", "none");
+                      }
+                    });
+
+                    // If number of grandchildren Contains a value over 9 show grandchildren section 10
+                    $("#grandchildNumber").keyup(function() {
+                      if (this.value > 9) {
+                          $("#grandchild10").css("display", "block");
+                      }
+                      else {
+                          $("#grandchild10").css("display", "none");
+                      }
+                    });
+                    });
+
+
+                    //jquery for form section loading
+                      $(document).ready(function() {
+                    // If number of parent Contains a value show parent section
+                    $("#parentNumber").keyup(function() {
+                      if (this.value != "") {
+                          $("#parentTable").css("display", "block");
+                      }
+                      else {
+                          $("#parentTable").css("display", "none");
+                      }
+                    });
+
+                    // If number of parent Contains a value over 1 show parent section 2
+                    $("#parentNumber").keyup(function() {
+                      if (this.value > 1) {
+                          $("#parent2").css("display", "block");
+                      }
+                      else {
+                          $("#parent2").css("display", "none");
+                      }
+                    });
+
+                    // If number of parent Contains a value over 2 show parent section 3
+                    $("#parentNumber").keyup(function() {
+                      if (this.value > 2) {
+                          $("#parent3").css("display", "block");
+                      }
+                      else {
+                          $("#parent3").css("display", "none");
+                      }
+                    });
+
+                    // If number of parent Contains a value over 3 show parent section 4
+                    $("#parentNumber").keyup(function() {
+                      if (this.value > 3) {
+                          $("#parent4").css("display", "block");
+                      }
+                      else {
+                          $("#parent4").css("display", "none");
+                      }
+                    });
+
+                    });
+
+
+                    //jquery for form section loading
+                      $(document).ready(function() {
+                    // If number of other Contains a value show other section
+                    $("#otherNumber").keyup(function() {
+                      if (this.value != "") {
+                          $("#otherTable").css("display", "block");
+                      }
+                      else {
+                          $("#otherTable").css("display", "none");
+                      }
+                    });
+
+                    // If number of other Contains a value over 1 show other section 2
+                    $("#otherNumber").keyup(function() {
+                      if (this.value > 1) {
+                          $("#other2").css("display", "block");
+                      }
+                      else {
+                          $("#other2").css("display", "none");
+                      }
+                    });
+
+                    // If number of other Contains a value over 2 show other section 3
+                    $("#otherNumber").keyup(function() {
+                      if (this.value > 2) {
+                          $("#other3").css("display", "block");
+                      }
+                      else {
+                          $("#other3").css("display", "none");
+                      }
+                    });
+
+                    // If number of other Contains a value over 3 show other section 4
+                    $("#otherNumber").keyup(function() {
+                      if (this.value > 3) {
+                          $("#other4").css("display", "block");
+                      }
+                      else {
+                          $("#other4").css("display", "none");
+                      }
+                    });
+
+                    });
+                      </script>
+
+<!-- Income details page !-->
+
+            <div role="tabpanel" class="tab-pane fade" id="dropdown6" aria-labelledby="profile-tab">
+              <h2><b>Your income details</b></h2>
+              <br>
+              <div class="row clearfix">
+                  <div class="col-md-12 table-responsive">
+                  <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                    <thead>
+                      <tr>
+                        <th class="text-center">
+                         Income Source
+                        </th>
+                        <th class="text-center">
+                        Amount
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr id='addr0' data-id="0" class="hidden">
+                        <td data-name="mail">
+                          <input disabled type="text" class="form-control" placeholder="e.g Employment" Required/>
+                        </td>
+                        <td data-name="name">
+                          <input disabled type="text" class="form-control" placeholder="Enter whole GBP (&pound;)" Required/>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+<!-- Expenditure details page !-->
+
+            <div role="tabpanel" class="tab-pane fade" id="dropdown7" aria-labelledby="profile-tab">
+              <h2><b>Your expenditure details</b></h2>
+              <br>
+              <div class="row clearfix">
+                  <div class="col-md-12 table-responsive">
+                  <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                    <thead>
+                      <tr >
+                        <th class="text-center">
+                          Expenditure
+                        </th>
+                        <th class="text-center">
+                        Total
+                      </th>
+                      <th class="text-center">
+                      Category
+                    </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr id='addr0' data-id="0" class="hidden">
+                        <td data-name="name">
+                            <input disabled type="text" name='name0'  placeholder='Name' class="form-control"/>
+                        </td>
+                        <td data-name="mail">
+                            <input disabled type="text" name='mail0' placeholder='Total value' class="form-control"/>
+                        </td>
+                        <td data-name="mail">
+                          <select disabled class="form-control" Required>
+                        <option disabled>Please Select</option>
+                        <option>Property</option>
+                        <option>Housekeeping</option>
+                        <option>Transport</option>
+                        <option>Dependents</option>
+                        <option>Pets</option>
+                        <option>Proffesional fees</option>
+                        <option>Cost of borrowing</option>
+                        <option>Regular savings</option>
+                        <option>Protection policies</option>
+                        <option>other</option>
+                        <option disabled>-------------</option>
+                        <option>Discretionary spending</option>
+                      </select>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+<!-- Assets details page !-->
+
+            <div role="tabpanel" class="tab-pane fade" id="dropdown8" aria-labelledby="profile-tab">
+              <h2><b>Your assets details</b></h2>
+              <br>
+              <div class="row clearfix">
+                  <div class="col-md-12 table-responsive">
+                  <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                    <thead>
+                      <tr>
+                        <th class="text-center">
+                         Assets
+                        </th>
+                        <th class="text-center">
+                          What type of Asset?
+                        </th>
+                        <th class="text-center">
+                        Trust
+                      </th>
+                        <th class="text-center">
+                        Total
+                      </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr id='addr0' data-id="0" class="hidden">
+                        <td data-name="mail">
+                          <select disabled class="form-control" Required>
+                        <option disabled>Please Select</option>
+                        <option>Pensions</option>
+                        <option>Savings</option>
+                        <option>Investments</option>
+                        <option>Property</option>
+                        <option>Vehicles</option>
+                        <option>Personal Effects</option>
+                        <option>Business Interests</option>
+                          </select>
+                        </td>
+                        <td data-name="name">
+                            <input disabled type="text" name='name0'  placeholder='What type?' class="form-control"/>
+                        </td>
+                        <td data-name="mail">
+                            <input disabled type="text" name='mail0' placeholder='Enter whole GBP (&pound;)' class="form-control"/>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+<!-- Liability details page !-->
+
+            <div role="tabpanel" class="tab-pane fade" id="dropdown9" aria-labelledby="profile-tab">
+              <h2><b>Your liability details</b></h2>
+              <br>
+              <div class="row clearfix">
+                  <div class="col-md-12 table-responsive">
+                  <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                    <thead>
+                      <tr>
+                        <th class="text-center">
+                         Description
+                        </th>
+                        <th class="text-center">
+                          Lender
+                        </th>
+                        <th class="text-center">
+                          Amount Owing
+                        </th>
+                        <th class="text-center">
+                          Interest Rate
+                        </th>
+                        <th class="text-center">
+                        Are you paying principal too?
+                      </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr id='addr0' data-id="0" class="hidden">
+                        <td data-name="mail">
+                          <input disabled type="text" class="form-control" placeholder="e.g Mortgage" Required/>
+                        </td>
+                        <td data-name="name">
+                          <input disabled type="text" class="form-control" placeholder="Who is your fund provider?" Required/>
+                        </td>
+                        <td data-name="mail">
+                          <input disabled type="text" placeholder='Enter whole GBP (&pound;)' class="form-control" Required/>
+                        </td>
+                        <td data-name="mail">
+                            <input disabled type="text" placeholder='Enter percentage (%)' class="form-control" Required/>
+                        </td>
+                        <td data-name="mail">
+                          <select disabled class="form-control" Required>
+                        <option>Yes</option>
+                        <option>No</option>
+                          </select>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+<!-- Affordability details page !-->
+
+            <div role="tabpanel" class="tab-pane fade" id="dropdown10" aria-labelledby="profile-tab">
+              <h2><b>Your affordability details</b></h2>
+              <br>
+              <div class="row clearfix">
+                  <div class="col-md-12 table-responsive">
+                  <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                    <thead>
+                      <tr>
+                        <th class="text-center">
+                         Category
+                        </th>
+                        <th class="text-center">
+                          Description of Disposable Income
+                        </th>
+                        <th class="text-center">
+                          Value
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr id='addr0' data-id="0" class="hidden">
+                        <td data-name="mail">
+                          <select class="form-control" Required>
+                        <option selected="selected" disabled="true" value="">Please Select</option>
+                        <option value="one">Committed Spending</option>
+                        <option value="two">Discretionary Spending</option>
+                        <option value="three">Spending surplus</option>
+                          </select>
+                        </td>
+                        <td data-name="name">
+                            <input disabled type="text" name='name0'  placeholder='Description' class="form-control" Required/>
+                        </td>
+                        <td data-name="mail">
+                            <input disabled type="number" name='mail0' placeholder='Enter whole GBP (&pound;)' class="form-control" Required/>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <br>
+              <br>
+              <br>
+
+              <div class="row clearfix">
+                  <div class="col-md-12 table-responsive">
+                  <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                    <thead>
+                      <tr>
+                        <th class="text-center">
+                        Category
+                        </th>
+                        <th class="text-center">
+                          Description of Disposable Income
+                        </th>
+                        <th class="text-center">
+                          Value
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>
+                          <input disabled type="text" class="form-control" placeholder="Income" disabled/>
+                        </td>
+                        <td>
+                            <input disabled type="text" class="form-control" placeholder="Income (GROSS)" disabled/>
+                        </td>
+                        <td>
+                            <input disabled type="text" placeholder='Enter whole GBP (&pound;)' class="form-control" Required/>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div></div></div></div>
+
+
+<!-- end of disabled content !-->
+
+            <div class="col-xs-4 col-xs-offset-4">
+              <br>
+            <span class="button-checkbox">
+                <button type="button" class="btn" data-color="primary">I have checked all forms and the details are correct</button>
+                <input type="checkbox" class="hidden" />
+            </span>
+            </div>
+
+            <script>
+            (function($) {
+
+              'use strict';
+
+              $(document).on('show.bs.tab', '.navbar-nav-responsive [data-toggle="tab"]', function(e) {
+                var $target = $(e.target);
+                var $tabs = $target.closest('.navbar-nav-responsive');
+                var $current = $target.closest('li');
+                var $parent = $current.closest('li.dropdown');
+                  $current = $parent.length > 0 ? $parent : $current;
+                var $next = $current.next();
+                var $prev = $current.prev();
+                var updateDropdownMenu = function($el, position){
+                  $el
+                    .find('.dropdown-menu')
+                    .removeClass('pull-xs-left pull-xs-center pull-xs-right')
+                    .addClass( 'pull-xs-' + position );
+                };
+
+                $tabs.find('>li').removeClass('next prev');
+                $prev.addClass('prev');
+                $next.addClass('next');
+
+                updateDropdownMenu( $prev, 'left' );
+                updateDropdownMenu( $current, 'center' );
+                updateDropdownMenu( $next, 'right' );
+              });
+
+            })(jQuery);
+
+            $(function () {
+                $('.button-checkbox').each(function () {
+
+                    // Settings
+                    var $widget = $(this),
+                        $button = $widget.find('button'),
+                        $checkbox = $widget.find('input:checkbox'),
+                        color = $button.data('color'),
+                        settings = {
+                            on: {
+                                icon: 'glyphicon glyphicon-check'
+                            },
+                            off: {
+                                icon: 'glyphicon glyphicon-unchecked'
+                            }
+                        };
+
+                    // Event Handlers
+                    $button.on('click', function () {
+                        $checkbox.prop('checked', !$checkbox.is(':checked'));
+                        $checkbox.triggerHandler('change');
+                        updateDisplay();
+                    });
+                    $checkbox.on('change', function () {
+                        updateDisplay();
+                    });
+
+                    // Actions
+                    function updateDisplay() {
+                        var isChecked = $checkbox.is(':checked');
+
+                        // Set the button's state
+                        $button.data('state', (isChecked) ? "on" : "off");
+
+                        // Set the button's icon
+                        $button.find('.state-icon')
+                            .removeClass()
+                            .addClass('state-icon ' + settings[$button.data('state')].icon);
+
+                        // Update the button's color
+                        if (isChecked) {
+                            $button
+                                .removeClass('btn-default')
+                                .addClass('btn-' + color + ' active');
+                        }
+                        else {
+                            $button
+                                .removeClass('btn-' + color + ' active')
+                                .addClass('btn-default');
+                        }
+                    }
+
+                    // Initialization
+                    function init() {
+
+                        updateDisplay();
+
+                        // Inject the icon if applicable
+                        if ($button.find('.state-icon').length == 0) {
+                            $button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
+                        }
+                    }
+                    init();
+                });
+            });
+            </script>
+
+            <script>
+            $(document).ready(function(){
+    $(".dropdown").hover(
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');
+        }
+    );
+});
+          </script>
+
+            <script>
+            new WOW().init();
+            </script>
+
+
+{% endblock %}

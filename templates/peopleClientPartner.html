@@ -1,0 +1,229 @@
+{%extends 'gen_style_partner.html'%}
+{% block mainBlock%}
+  <div class="container">
+    <h2 class="wow slideInLeft log-In-Title"> Time to fill in some basic details.</h2>
+<div class="row">
+     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+       <div class="col-lg-6">
+       <div class="panel panel-default">
+         <div class="panel-heading" role="tab" id="headingOne">
+           <h4 class="panel-title">
+             <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <h1 class="log-In-Title">Partner <small>one</small></h1>
+             </a>
+           </h4>
+         </div>
+         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+           <div class="panel-body">
+             <form>
+             <div class="form-group col-md-4">
+               <label for="formGroupExampleInput">Title</label>
+               <select class="form-control">
+             <option>Please Select</option>
+             <option>Mr</option>
+             <option>Ms</option>
+             <option>Mrs</option>
+             <option>Mx</option>
+             <option>Other</option>
+            </select>
+             </div>
+             <div class="form-group col-md-4">
+               <label for="formGroupExampleInput2">First name</label>
+               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name">
+             </div>
+
+             <div class="form-group col-md-4">
+               <label for="formGroupExampleInput2">Surname</label>
+               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname">
+             </div>
+             <div class="form-group col-md-4">
+               <label for="formGroupExampleInput2">Initials</label>
+               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials">
+             </div>
+             <div class="form-group col-md-4">
+               <label for="formGroupExampleInput2">Prefers</label>
+               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers">
+             </div>
+             <div class="form-group col-md-4">
+              <label for="formGroupExampleInput2">Maiden name</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Maiden name">
+             </div>
+             <div class="form-group col-md-6">
+               <label for="formGroupExampleInput">Martial Status</label>
+               <select class="form-control">
+             <option>Please Select</option>
+             <option>Single</option>
+             <option>Divorced</option>
+             <option>Married</option>
+             <option>Other</option>
+            </select>
+             </div>
+
+             <div class="form-group col-md-6">
+               <label for="formGroupExampleInput2">Date of birth</label>
+               <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+             </div>
+
+             <div class="form-group col-md-6">
+               <label for="formGroupExampleInput">Sex</label>
+               <select class="form-control">
+             <option>Please Select</option>
+             <option>Male</option>
+             <option>Female</option>
+             <option>Trans</option>
+             <option>Other</option>
+             </select>
+             </div>
+
+            <div class="form-group col-md-6">
+             <label for="formGroupExampleInput2">Retire at age</label>
+             <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Retirement age">
+            </div>
+            <div class="form-group col-md-12">
+             <label for="formGroupExampleInput2">Ethical/Religious beliefs that might affect fanancial planning?</label>
+             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+            </div>
+            <div class="form-group col-md-12">
+             <label for="formGroupExampleInput2">Anticipated changes in next 5 years?</label>
+             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+            </div>
+
+            <h3><i> Meetings</i> </h3>
+            <div class="form-group col-md-4">
+              <label for="formGroupExampleInput2">1st</label>
+              <input type="date" class="form-control" id="formGroupExampleInput2" value="2016-11-02" placeholder="" disabled >
+            </div>
+            <div class="form-group col-md-4">
+              <label for="formGroupExampleInput2">Last</label>
+              <input type="date" class="form-control" id="formGroupExampleInput2" value="2016-11-12" placeholder="" disabled >
+            </div>
+            <div class="form-group col-md-4">
+              <label for="formGroupExampleInput2">Next</label>
+              <input type="date" class="form-control" id="formGroupExampleInput2" value="2016-11-22" placeholder="" disabled >
+            </div>
+
+            <button type="button" class="btn btn-sm btn-info col-md-4" data-toggle="modal" data-target="#myModal">Update Contact Details</button>
+            <button class="btn btn-danger col-md-2 col-md-offset-5"><span class="glyphicon glyphicon-trash"></span> Cancel</button>
+            <button class="btn btn-success col-md-2 col-md-offset-"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+            </form>
+           </div>
+         </div>
+       </div>
+     </div>
+
+        <div class="col-lg-6">
+       <div class="panel panel-default">
+         <div class="panel-heading" role="tab" id="headingTwo">
+           <h4 class="panel-title">
+             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <h1 class="log-In-Title">Partner <small>two</small></h1>
+             </a>
+           </h4>
+         </div>
+         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+           <div class="panel-body">
+             <form>
+             <div class="form-group col-md-4">
+               <label for="formGroupExampleInput">Title</label>
+               <select class="form-control">
+             <option>Please Select</option>
+             <option>Mr</option>
+             <option>Ms</option>
+             <option>Mrs</option>
+             <option>Mx</option>
+             <option>Other</option>
+            </select>
+             </div>
+             <div class="form-group col-md-4">
+               <label for="formGroupExampleInput2">First name</label>
+               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="First name">
+             </div>
+
+             <div class="form-group col-md-4">
+               <label for="formGroupExampleInput2">Surname</label>
+               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Surname">
+             </div>
+             <div class="form-group col-md-4">
+               <label for="formGroupExampleInput2">Initials</label>
+               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Initials">
+             </div>
+             <div class="form-group col-md-4">
+               <label for="formGroupExampleInput2">Prefers</label>
+               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Prefers">
+             </div>
+             <div class="form-group col-md-4">
+              <label for="formGroupExampleInput2">Maiden name</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Maiden name">
+             </div>
+             <div class="form-group col-md-6">
+               <label for="formGroupExampleInput">Martial Status</label>
+               <select class="form-control">
+             <option>Please Select</option>
+             <option>Single</option>
+             <option>Divorced</option>
+             <option>Married</option>
+             <option>Other</option>
+            </select>
+             </div>
+
+             <div class="form-group col-md-6">
+               <label for="formGroupExampleInput2">Date of birth</label>
+               <input type="Date" class="form-control" id="formGroupExampleInput2" placeholder="D.O.B">
+             </div>
+
+             <div class="form-group col-md-6">
+               <label for="formGroupExampleInput">Sex</label>
+               <select class="form-control">
+             <option>Please Select</option>
+             <option>Male</option>
+             <option>Female</option>
+             <option>Trans</option>
+             <option>Other</option>
+             </select>
+             </div>
+
+            <div class="form-group col-md-6">
+             <label for="formGroupExampleInput2">Retire at age</label>
+             <input type="number" class="form-control" id="formGroupExampleInput2" placeholder="Retirement age">
+            </div>
+            <div class="form-group col-md-12">
+             <label for="formGroupExampleInput2">Ethical/Religious beliefs that might affect fanancial planning?</label>
+             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+            </div>
+            <div class="form-group col-md-12">
+             <label for="formGroupExampleInput2">Anticipated changes in next 5 years?</label>
+             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+            </div>
+
+            <h3><i> Meetings</i> </h3>
+            <div class="form-group col-md-4">
+              <label for="formGroupExampleInput2">1st</label>
+              <input type="date" class="form-control" id="formGroupExampleInput2" value="2016-11-02" placeholder="" disabled >
+            </div>
+            <div class="form-group col-md-4">
+              <label for="formGroupExampleInput2">Last</label>
+              <input type="date" class="form-control" id="formGroupExampleInput2" value="2016-11-12" placeholder="" disabled >
+            </div>
+            <div class="form-group col-md-4">
+              <label for="formGroupExampleInput2">Next</label>
+              <input type="date" class="form-control" id="formGroupExampleInput2" value="2016-11-22" placeholder="" disabled >
+            </div>
+
+            <button type="button" class="btn btn-sm btn-info col-md-4" data-toggle="modal" data-target="#myModal">Update Contact Details</button>
+            <button class="btn btn-sm btn-danger col-md-2 col-md-offset-4">Cancel</button>
+            <button class="btn btn-sm btn-success col-md-2 col-md-offset-">Save</button>
+            </form>
+           </div>
+         </div>
+       </div>
+  	</div>
+  </div>
+
+    </div>
+  </div>
+
+
+  <script>
+               new WOW().init();
+  </script>
+  {%endblock%}

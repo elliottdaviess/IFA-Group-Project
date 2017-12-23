@@ -1,0 +1,113 @@
+{%extends 'signin_Style.html'%}
+
+{% block mainBlock%}
+<!-- Title providing text in window tab -->
+    <title>Register</title>
+<!-- Container holding page content -->
+<div class="container wow bounceInRight" data-wow-duration="1s" >
+   <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-login">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-lg-12">
+<!-- reg form -->
+              <form id="register-form-ifa" onsubmit="return loadName()" method = "POST">
+
+                <h2>REGISTER <small>as an ifa</small></h2>
+                  <div class="form-group">
+                    <input type="text" name="first_name" id="first_name"  class="form-control col-xs-6" placeholder="First Name" value="" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="surname" id="surname" class="form-control col-xs-6" placeholder="Surname" value="" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="email" id="email"  class="form-control" placeholder="Email Address" value="" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="password" id="password" class="form-control col-xs-6" placeholder="Password" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="confirm_password" id="confirm_password" class="form-control col-xs-6" placeholder="Confirm Password" required>
+
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <input type="submit"  name="register-submit" id="register-submit"  class="form-control btn btn-register" onclick="validate()" value="Register Now">
+                      </div>
+                    </div>
+                  </div>
+                  <center><h2 style="color:red">{{msg}}</h2><center>
+              </form>
+            </div>
+          </div>
+        </div>
+<!-- panel containing link to log in page -->
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-12 tabs">
+              <a href="logIn.html" class="active" id="login-form-link"><div class="login">Have an account? <b>Login</b></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+             new WOW().init();
+
+
+function validate()
+
+{
+
+    var username   = document.getElementById('email').value;
+
+    var password = document.getElementById('password').value;
+
+    var confirm_password = document.getElementById('confirm_password').value;
+
+    var illegalChars = ; // allow letters, numbers, and underscores
+
+    var passwordVal=  /^[A-Za-z]\w{7,16}$/; //contain only characters, numeric digits, underscore and first character must be a letter. Between 8-16 characters.
+
+
+
+    if (illegalChars.test(username)) //validating username
+
+    {
+
+        alert('The username must only contain letters, numbers and underscores');
+
+        return false;
+
+    }
+
+    if (password != confirm_password) // If passwords dont match:
+
+    {
+
+        alert('Passwords do not match, please try again');
+
+        return false;
+
+    }
+
+    if (password.match(passwordVal) == null) //validating password
+
+    {
+        alert('Password must:\n - Be between 8-16 characters\n - Only contain characters, numeric digits, and underscores\n - Have a letter for the first character');
+
+        return false;
+    }
+
+
+    return true;
+
+
+}
+  </script>
+{%endblock%}

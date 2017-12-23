@@ -1,0 +1,199 @@
+{%extends 'gen_style.html'%}
+
+{% block mainBlock%}
+<!-- Title providing text in window tab -->
+<title>Occupations</title>
+<!-- Container holding page content -->
+    <div class="container">
+      <div id="added_Data" class="alert alert-success alert-dismissible wow slideInRight" role="alert"  >
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Success!</strong> Your data was added. <a class="alert-link" href="/peopleHealth">Move on to Health details</a>
+      </div>
+        <div class="row wow slideInLeft">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="col-md-12 ">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                   <h2><i>Occupations Form</i> </h2>
+                </a>
+              </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in bshadow" role="tabpanel" aria-labelledby="headingOne">
+                              <!--Occupations form-->
+                              <div class="panel-body">
+                                <form id="peopleoccupations" method="post">
+                                    <div class="form-group col-md-3">
+                                        <label for="occupation">Occupation</label>
+                                        <input type="text" class="form-control" name="occupation" id="occupation" placeholder="Occupation">
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <div class="form-group col-md-3">
+                                        <label for="employment_status">Employment status</label>
+                                        <select class="form-control" name="employment_status" id="employment_status">
+                                        <option>Please Select</option>
+                                        <option>Part-time</option>
+                                        <option>Full-time</option>
+                                        <option>Self employed</option>
+                                        <option>Unemployed</option>
+                                      </select>
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <div class="form-group col-md-6">
+                                        <label for="self_employed">If self employed</label>
+                                        <input type="text" class="form-control" name ="self_employed" id="self_employed" placeholder="sole proprietor, partnership or company?">
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <div class="form-group col-md-2">
+                                        <label for="employer">Employer</label>
+                                        <input type="text" class="form-control" name="employer" id="employer" placeholder="Employer Name">
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <div class="form-group col-md-3">
+                                        <label for="date_joined">Date Joined Company</label>
+                                        <input type="text" class="form-control" name="date_joined" id="date_joined" placeholder="DD/MM/YYYY">
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <div class="form-group col-md-3">
+                                        <label for="ideal_ret_age">Ideal retirement age</label>
+                                        <input type="number" class="form-control" name="ideal_ret_age" id="ideal_ret_age" placeholder="What age do you want to retire at?">
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <div class="form-group col-md-4">
+                                        <label for="leaving_soon">Will you be leaving your current employment soon?</label>
+                                        <select class="form-control" name="leaving_soon" id="leaving_soon">
+                                        <option>Please Select</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                      </select>
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <div class="form-group col-md-3">
+
+                                        <label for="finish_date">If yes, what date will you finish?</label>
+                                        <input type="text" class="form-control" name="finish_date" id="finish_date" placeholder="DD/MM/YYYY">
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <div class="form-group col-md-2">
+                                        <label for="ret_age">Retirement age</label>
+                                        <input type="number" class="form-control" name="ret_age" id="ret_age" placeholder="Retirement age">
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <div class="form-group col-md-3">
+                                        <label for="leaving_reason">What is the reason you're leaving?</label>
+                                        <input type="text" class="form-control" name="leaving_reason" id="leaving_reason" placeholder="e.g. retrenchment, resignation, retirement">
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <div class="form-group col-md-4">
+                                        <label for="return_date">Do you intend to return to employment? If so, when?</label>
+                                        <input type="text" class="form-control" name="return_date" id="return_date" placeholder="DD/MM/YYYY">
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <h3><i> Qualifications</i> </h3>
+                                    <div class="form-group col-md-3">
+                                        <label for="gcse">GCSE's</label>
+                                        <input type="text" class="form-control" name="gcse" id="gcse" placeholder="GCSE's">
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <div class="form-group col-md-3">
+                                        <label for="alevel_btec">A level/BTEC</label>
+                                        <input type="text" class="form-control" name="alevel_btec" id="alevel_btec" placeholder="A levels/BTEC">
+                                    </div>
+                                    <!--field for Occupations form-->
+                                    <div class="form-group col-md-6">
+                                        <label for="other">Other</label>
+                                        <input type="text" class="form-control" name="other" id="other" placeholder="Other Qualifications">
+                                    </div>
+                                    <!--buttons to save info to the database or cancel and return to the homepage-->
+                                    <button class="btn btn-danger col-md-2 col-md-offset-5"><span class="glyphicon glyphicon-trash"></span> Cancel</button>
+                                    <button class="btn btn-success col-md-2 col-md-offset-" onclick="validateOccupation()"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+
+                                </form>
+
+<input id="msg" value="{{ msg }}" hidden="true">
+
+                                <script>
+                                $(document).ready(function(){
+                                var val = $("#msg").val();
+                                if (val == '') {
+                                        $("#added_Data").css("display", "none");
+                                    }
+                                 });
+                                 </script>
+
+                                <!-- <script>
+                                function validateOccupation()
+                                {
+
+                                var joindate = document.getElementById('date_joined').value;
+                                var finishdates = document.getElementById('finish_date').value;
+                                var returndates = document.getElementById('return_date').value;
+                                var retireage = document.getElementById('ideal_ret_age').value;
+                                var expectedretire = document.getElementById('ret_age').value;
+
+                                var dates = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/
+                                var letters = /^[A-Za-z]+$/;
+                                var numbers = /^[0-9]+$/;
+
+                                if(joindate.match(dates) == null)
+
+                                  {
+
+                                  alert("You haven't followed the date structure in 'Date Joined Company'");
+
+                                  return false;
+
+                                  }
+
+                                if(finishdates.match(dates) == null)
+
+                                    {
+
+                                    alert("You haven't followed the date structure in 'If yes, what date will you finish?'");
+
+                                    return false;
+
+                                    }
+                                if(returndates.match(dates) == null)
+
+                                        {
+
+                                        alert("You haven't followed the date structure in 'Do you intend to return to employment? If so, when?'");
+
+                                        return false;
+
+                                        }
+                                if(retireage.match(numbers) == null)
+
+                                          {
+
+                                          alert("Please enter your age in numbers");
+
+                                          return false;
+                                          }
+                                if(expectedretire.match(numbers) == null)
+
+                                          {
+
+                                          alert("Please enter your age in numbers");
+
+                                          return false;
+                                          }
+
+                                }
+
+
+
+
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+        {%endblock%}

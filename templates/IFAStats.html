@@ -1,0 +1,249 @@
+{%extends 'ifastyle.html'%}
+
+{% block mainBlock%}
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 style="text-align: center;">Your stats</h1>
+
+                <button type="button" style="margin-top:10px;" class=" wow slideInLeft btn btn-lg btn-warning col-md-5 col-xs-12" data-toggle="modal" data-target="#myModal"><span class=" glyphicon glyphicon-modal-window"></span> Client age stats</button> <!-- Trigger the modal with this button -->
+
+                <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog modal-lg">
+                      <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Client age stats</h4>
+                      </div>
+<div class="modal-body">
+                <div id="container"></div>
+</div>
+              </div>
+
+                        </div>
+
+                    </div>
+                    <button type="button" style="margin-top:10px;" class="wow slideInRight btn btn-lg btn-primary col-md-offset-2 col-md-5 col-xs-12" data-toggle="modal" data-target="#myModal2"><span class=" glyphicon glyphicon-modal-window"></span> Client age stats</button> <!-- Trigger the modal with this button -->
+
+                    <div class="modal fade" id="myModal2" role="dialog">
+                      <div class="modal-dialog modal-lg">
+                          <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Client Wealth stats</h4>
+                          </div>
+<div class="modal-body">
+                    <div id="Stat2" ></div>
+</div>
+                  </div>
+
+                            </div>
+
+                        </div>
+                        <button type="button" class=" wow slideInUp btn btn-lg btn-danger col-md-12 col-xs-12" style="margin-top:10px;" data-toggle="modal" data-target="#myModal3"><span class=" glyphicon glyphicon-modal-window"></span> Client Debt stats</button> <!-- Trigger the modal with this button -->
+
+                        <div class="modal fade" id="myModal3" role="dialog">
+                          <div class="modal-dialog modal-lg">
+                              <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Client Debt stats</h4>
+                              </div>
+<div class="modal-body">
+                        <div id="Stat3"  ></div>
+</div>
+                      </div>
+
+                                </div>
+
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                <script src="https://code.highcharts.com/highcharts.js"></script>
+                <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script>
+               new WOW().init();
+
+               $(function () {
+
+                   $(document).ready(function () {
+
+                       // Build the chart
+                       Highcharts.chart('container', {
+                           chart: {
+                               plotBackgroundColor: null,
+                               plotBorderWidth: null,
+                               plotShadow: false,
+                               type: 'pie'
+                           },
+                           title: {
+                               text: 'The age of your clients'
+                           },
+                           tooltip: {
+                               pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                           },
+                           plotOptions: {
+                               pie: {
+                                   allowPointSelect: true,
+                                   cursor: 'pointer',
+                                   dataLabels: {
+                                       enabled: true
+                                   },
+                                   showInLegend: true
+                               }
+                           },
+                           series: [{
+                               name: 'Brands',
+                               colorByPoint: true,
+                               data: [{
+                                   name: '18 - 25',
+                                   y: 5
+                               }, {
+                                   name: '26 - 32',
+                                   y: 24,
+                                   sliced: true,
+                                   selected: true
+                               }, {
+                                   name: '33 - 40',
+                                   y: 21
+                               }, {
+                                   name: '41 - 48',
+                                   y: 35
+                               }, {
+                                   name: '49 - 56',
+                                   y: 5
+                               }, {
+                                   name: '57+',
+                                   y:10
+                               }]
+                           }]
+                       });
+
+                   });
+               });
+
+               $(function () {
+
+                   $(document).ready(function () {
+
+                       // Build the chart
+                       Highcharts.chart('Stat2', {
+                           chart: {
+                               plotBackgroundColor: null,
+                               plotBorderWidth: null,
+                               plotShadow: false,
+                               type: 'pie'
+                           },
+                           title: {
+                               text: 'The Current asset value of your clients'
+                           },
+                           tooltip: {
+                               pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                           },
+                           plotOptions: {
+                               pie: {
+                                   allowPointSelect: true,
+                                   cursor: 'pointer',
+                                   dataLabels: {
+                                       enabled: false
+                                   },
+                                   showInLegend: true
+                               }
+                           },
+                           series: [{
+                               name: '',
+                               colorByPoint: true,
+                               data: [{
+                                   name: '0 - 15k',
+                                   y: 5
+                               }, {
+                                   name: '16 - 31k',
+                                   y: 24,
+                                   sliced: true,
+                                   selected: true
+                               }, {
+                                   name: '32 - 47k',
+                                   y: 11
+                               }, {
+                                   name: '48 - 63k',
+                                   y: 30
+                               }, {
+                                   name: '64 - 79k',
+                                   y: 15
+                               }, {
+                                   name: '79k+',
+                                   y:15
+                               }]
+                           }]
+                       });
+
+                   });
+               });
+
+               $(function () {
+
+                   $(document).ready(function () {
+
+                       // Build the chart
+                       Highcharts.chart('Stat3', {
+                           chart: {
+                               plotBackgroundColor: null,
+                               plotBorderWidth: null,
+                               plotShadow: false,
+                               type: 'pie'
+                           },
+                           title: {
+                               text: 'The Current Debt value of your clients'
+                           },
+                           tooltip: {
+                               pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                           },
+                           plotOptions: {
+                               pie: {
+                                   allowPointSelect: true,
+                                   cursor: 'pointer',
+                                   dataLabels: {
+                                       enabled: false
+                                   },
+                                   showInLegend: true
+                               }
+                           },
+                           series: [{
+                               name: '',
+                               colorByPoint: true,
+                               data: [{
+                                   name: '0 - 15k',
+                                   y: 45
+                               }, {
+                                   name: '16 - 31k',
+                                   y: 10,
+                                   sliced: true,
+                                   selected: true
+                               }, {
+                                   name: '32 - 47k',
+                                   y: 20
+                               }, {
+                                   name: '48 - 63k',
+                                   y: 15
+                               }, {
+                                   name: '64 - 79k',
+                                   y: 5
+                               }, {
+                                   name: '79k+',
+                                   y:5
+                               }]
+                           }]
+                       });
+
+                   });
+               });
+
+
+               </script>
+
+                   {%endblock%}

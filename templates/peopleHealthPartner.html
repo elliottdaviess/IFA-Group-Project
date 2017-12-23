@@ -1,0 +1,1434 @@
+{%extends 'gen_style_partner.html'%}
+{% block mainBlock%}
+
+  <div class="container">
+    <h2 class="wow slideInLeft log-In-Title"> Carefully fill in this health form.</h2>
+  <div class="row wow slideInLeft">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="col-md-12" style="padding:20px;">
+      <div class="panel panel-default">
+          <div class="panel-body">
+
+        <form>
+
+        <h2>Wealth Protection</h2>
+
+        <br>
+
+          <h3><i>1. Personal and general insurances</i></h3>
+            <div class="alert alert-warning alert-dismissible" role="alert">
+             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             <strong>Notice:</strong> This section should include both partner's personal and general insurance(s).
+             </div>
+          <p><b>Please provide us with details of:</b></p>
+          <p><i><b>Personal insurance</b> - Your Life, Total and Permanent Disability, Trauma, Income Protection and private health cover</i></p>
+          <p><i><b>General insurance</b> - Current policies held (Home, contents, car, etc)</i></p>
+
+          <br>
+
+          <div class="row clearfix">
+              <div class="col-md-12 table-responsive">
+              <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                <thead>
+                  <tr>
+                    <th class="text-center">
+                     Type
+                    </th>
+                    <th class="text-center">
+                     Insurance Company
+                    </th>
+                    <th class="text-center">
+                     Type of Policy
+                    </th>
+                    <th class="text-center">
+                      Policy no.
+                    </th>
+                    <th class="text-center">
+                      Owner
+                    </th>
+                    <th class="text-center">
+                      Sum insured
+                    </th>
+                    <th class="text-center">
+                      Beneficiary
+                    </th>
+                    <th class="text-center">
+                      Annual Premium
+                    </th>
+                        <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr id='addr0' data-id="0" class="hidden">
+                      <td data-name="insurance_list1">
+                        <select class="form-control" Required>
+                      <option disabled>Please Select</option>
+                      <option>Personal</option>
+                      <option>General</option>
+                        </select>
+                    <td data-name="insurance_list1">
+                    <input type="text" name='insurance1'  class="form-control" placeholder='Company' Required/>
+                    </td>
+                    <td data-name="insurance_list1">
+                        <input type="text" name='insurance1'  class="form-control" placeholder='e.g. PPI' Required/>
+                    </td>
+                    <td data-name="insurance_list1">
+                        <input type="text" name='insurance1' class="form-control" pattern="[0-9]*" maxlength="10" placeholder='Enter 10 digits' Required/>
+                    </td>
+                    <td data-name="insurance_list1">
+                        <input type="text" name='insurance1' class="form-control" placeholder='e.g. You, other' Required/>
+                    </td>
+                    <td data-name="insurance_list1">
+                        <input type="number" name='insurance1' class="form-control" min="0" step="1" placeholder='GBP (&pound;)' Required/>
+                    </td>
+                    <td data-name="insurance_list1">
+                        <input type="text" name='insurance1' class="form-control" placeholder='Beneficiary' Required/>
+                    </td>
+                    <td data-name="insurance_list1">
+                        <input type="number" name='insurance1' class="form-control" min="0" step="1" placeholder='GBP (&pound;)' Required/>
+                    </td>
+                    <td data-name="del">
+                      <button nam"del0" class='btn btn-danger glyphicon glyphicon-remove row-remove'></button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <a id="add_row" class="btn btn-info pull-right"><span class="glyphicon glyphicon-plus"></span>Add another</a>
+
+          <br>
+          <br>
+
+          <div class="alert alert-warning alert-dismissible" role="alert">
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+           <strong>Notice: </strong> Policy no. - Enter only 10 digits.
+         </div>
+
+         <div class="alert alert-warning alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Notice: </strong> Sum insured and Annual Premium - Enter whole GBP (&pound;) or 0 for none.
+         </div>
+
+         <div class="alert alert-warning alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Notice: </strong> Beneficiary - Enter only primary beneficary.
+         </div>
+
+         <div class="col-xs-12">
+           <button class="btn btn-danger col-md-2 col-md-offset-5"><span class="glyphicon glyphicon-trash"></span> Cancel</button>
+           <button class="btn btn-success col-md-2 col-md-offset-"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+         </div>
+
+        </form>
+
+              </div>
+            </div>
+          </div>
+
+        <script>
+        $(document).ready(function() {
+            $("#add_row").on("click", function() {
+                // Dynamic Rows Code
+
+                // Get max row id and set new id
+                var newid = 0;
+                $.each($("#tab_logic tr"), function() {
+                    if (parseInt($(this).data("id")) > newid) {
+                        newid = parseInt($(this).data("id"));
+                    }
+                });
+                newid++;
+
+                var tr = $("<tr></tr>", {
+                    id: "addr"+newid,
+                    "data-id": newid
+                });
+
+                // loop through each td and create new elements with name of newid
+                $.each($("#tab_logic tbody tr:nth(0) td"), function() {
+                    var cur_td = $(this);
+
+                    var children = cur_td.children();
+
+                    // add new td and element if it has a nane
+                    if ($(this).data("name") != undefined) {
+                        var td = $("<td></td>", {
+                            "data-name": $(cur_td).data("name")
+                        });
+
+                        var c = $(cur_td).find($(children[0]).prop('tagName')).clone().val("");
+                        c.attr("name", $(cur_td).data("name") + newid);
+                        c.appendTo($(td));
+                        td.appendTo($(tr));
+                    } else {
+                        var td = $("<td></td>", {
+                            'text': $('#tab_logic tr').length
+                        }).appendTo($(tr));
+                    }
+                });
+
+                // add delete button and td
+                /*
+                $("<td></td>").append(
+                    $("<button class='btn btn-danger glyphicon glyphicon-remove row-remove'></button>")
+                        .click(function() {
+                            $(this).closest("tr").remove();
+                        })
+                ).appendTo($(tr));
+                */
+
+                // add the new row
+                $(tr).appendTo($('#tab_logic'));
+
+                $(tr).find("td button.row-remove").on("click", function() {
+                     $(this).closest("tr").remove();
+                });
+        });
+
+
+
+
+            // Sortable Code
+            var fixHelperModified = function(e, tr) {
+                var $originals = tr.children();
+                var $helper = tr.clone();
+
+                $helper.children().each(function(index) {
+                    $(this).width($originals.eq(index).width())
+                });
+
+                return $helper;
+            };
+
+            $(".table-sortable tbody").sortable({
+                helper: fixHelperModified
+            }).disableSelection();
+
+            $(".table-sortable thead").disableSelection();
+
+
+
+            $("#add_row").trigger("click");
+        });
+          </script>
+
+    <div class="row">
+     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+       <div class="col-lg-6">
+       <div class="panel panel-default">
+         <div class="panel-heading" role="tab" id="headingOne">
+           <h4 class="panel-title">
+             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              <h1 class="log-In-Title">Partner <small>one</small></h1>
+             </a>
+           </h4>
+         </div>
+         <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+           <div class="panel-body">
+
+               <form>
+
+                     <h3><i>2. Attitude to insurance</i></h3>
+                     <p><b>In the event of an untimely death, accident or serious illness:</b></p>
+
+                     <br>
+
+                     <div class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>1.</b> Is your family able to live without financial burden in the event
+                         that you should die?</label>
+                       <select class="form-control" Required>
+                         <option disabled>Please Select</option>
+                         <option></option>
+                         <option>Yes</option>
+                         <option>No</option>
+                       </select>
+                     </div>
+
+                     <div class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>2.</b> Do you have an alternative source of income in the event
+                         of serious illness or disability?</label>
+                       <select class="form-control" Required>
+                         <option disabled>Please Select</option>
+                         <option></option>
+                         <option>Yes</option>
+                         <option>No</option>
+                       </select>
+                     </div>
+
+                     <div class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>3.</b> Would you prefer to be debt free?</label>
+                       <select class="form-control" Required>
+                         <option disabled>Please Select</option>
+                         <option></option>
+                         <option>Yes</option>
+                         <option>No</option>
+                       </select>
+                     </div>
+
+                     <div class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>4.</b> Are you prepared to sell your assets (excluding your family
+                         home and contents) into an income stream to meet the ongoing
+                         living costs of your family?</label>
+                       <select class="form-control" Required>
+                         <option disabled>Please Select</option>
+                         <option></option>
+                         <option>Yes</option>
+                         <option>No</option>
+                       </select>
+                     </div>
+
+                     <div class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>5.</b> Do you wish to provide an ongoing income stream to your
+                         dependants in the event of death.</label>
+                       <select class="form-control" name="income-stream" id="income-stream" Required>
+                         <option disabled>Please Select</option>
+                         <option></option>
+                         <option>Yes</option>
+                         <option>No</option>
+                       </select>
+                     </div>
+
+                     <div id="yes-stream" style="display:none;" class="form-group col-md-6">
+                       <label for="specify-amount"><b>5.a)</b> Please state the preferred amount (after tax).</label>
+                       <input class="form-control" type="number" name="specify-amount" min=0 step=1 placeholder="Enter whole GBP (£)"/>
+                       <label for="specify-amount">5.b) For how long?</label>
+                       <input class="form-control" type="number" name="specify-amount" min=0 step=1 placeholder="Enter number of years"/>
+                     </div>
+
+                     <div class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>6.</b> Are you prepared to sell your assets (excluding your family
+                         home and contents) into an income stream to meet the ongoing
+                         living costs of your family?</label>
+                       <select class="form-control" Required>
+                         <option disabled>Please Select</option>
+                         <option></option>
+                         <option>Yes</option>
+                         <option>No</option>
+                       </select>
+                     </div>
+
+                     <div class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>7.</b> How long could you continue to live without earning an income?</label>
+                       <select class="form-control" name="life-wo-income" id="life-wo-income" Required>
+                         <option disabled>Please Select</option>
+                         <option></option>
+                         <option>Up to 30 days</option>
+                         <option>Up to 60 days</option>
+                         <option>Up 90 days</option>
+                         <option>Other</option>
+                       </select>
+                     </div>
+
+                     <div id="other-wo-income" style="display:none;" class="form-group col-md-6">
+                       <label for="other-time-wo-income"><b>7.a)</b> Please specify for how long.</label>
+                       <input class="form-control" type="text" name="other-time-wo-income" placeholder="Enter amount of time"/>
+                     </div>
+
+                     <div class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>8.</b> Do you have any specific requests?</label>
+                       <select class="form-control" name="specific-request" id="specific-request" Required>
+                         <option disabled>Please Select</option>
+                         <option></option>
+                         <option>Yes</option>
+                         <option>No</option>
+                       </select>
+                     </div>
+
+                     <div id="request-yes" style="display:none;" class="form-group col-md-6">
+                       <label for="specify-yes-request"><b>8.a)</b> Please explain them:</label>
+                       <input class="form-control" type="text" name="specify-yes-request" placeholder="Enter your specific requests"/>
+                     </div>
+
+                   <div class="form-group col-md-6">
+                     <label for="formGroupExampleInput"><b>9.</b> How would you rate your health?</label>
+                     <select class="form-control" Required>
+                       <option disabled>Please Select</option>
+                       <option></option>
+                       <option>Good</option>
+                       <option>Fair</option>
+                       <option>Poor</option>
+                     </select>
+                   </div>
+
+                   <div class="form-group col-md-6">
+                     <label for="formGroupExampleInput"><b>10.</b> Are you a smoker?</label>
+                     <select class="form-control" Required>
+                       <option disabled>Please Select</option>
+                       <option></option>
+                       <option>Yes</option>
+                       <option>No</option>
+                     </select>
+                   </div>
+
+                   <div class="form-group col-md-6">
+                     <label for="formGroupExampleInput"><b>11.</b> Do you have private health insurance?</label>
+                     <select class="form-control" Required>
+                       <option disabled>Please Select</option>
+                       <option></option>
+                       <option>Yes</option>
+                       <option>No</option>
+                     </select>
+                   </div>
+
+                   <div class="form-group col-md-6">
+                     <label for="formGroupExampleInput"><b>12.</b> Are you involved in any hazardous pastimes,
+                   (e.g. sky diving, rock climbing, BASE jumping, etc?)</label>
+                     <select class="form-control" name="hazard-pastime" id="hazard-pastime" Required>
+                       <option disabled>Please Select</option>
+                       <option></option>
+                       <option>Yes</option>
+                       <option>No</option>
+                     </select>
+                   </div>
+
+                   <div id="yes-pastime" style="display:none;" class="form-group col-md-6">
+                     <label for="pastime-hazard"><b>12.a)</b> Specify what pastimes you engage in:</label>
+                     <input class="form-control" type="text" name="pastime-hazard" placeholder="Enter hazard pastime activity"/>
+                     <br>
+                     <input type="button" id="more_fields" onclick="add_fields3();" value="Add another" class="btn btn-sm btn-info col-md-3"/>
+                     <br>
+                     <br>
+                       <div id="pastime">
+                                <div>
+                                 <div class='label'></div>
+                                 <div class="content">
+                                 </div>
+                                </div>
+                             </div>
+                   </div>
+
+                   <br>
+
+                   <div class="form-group col-md-6">
+                     <label for="formGroupExampleInput"><b>13. Are you aware of any health issues that might affect current
+                       or future financial advice and insurance considerations?</b></label>
+                     <select class="form-control" name="health-issues" id="health-issues" Required>
+                       <option disabled>Please Select</option>
+                       <option></option>
+                       <option>Yes</option>
+                       <option>No</option>
+                     </select>
+                   </div>
+
+                   <div id="yes-issues" style="display:none;" class="form-group col-md-6">
+                     <label for="specify-health-issues"><b>13.a)</b> Please state the health issues that you are aware of:</label>
+                     <input class="form-control" type="text" name="specify-health-issues" placeholder="Enter health issue"/>
+                     <br>
+                     <input type="button" id="more_fields" onclick="add_fields4();" value="Add another" class="btn btn-sm btn-info col-md-3"/>
+                     <br>
+                     <br>
+                       <div id="issues">
+                                <div>
+                                 <div class='label'></div>
+                                 <div class="content">
+                                 </div>
+                                </div>
+                             </div>
+                   </div>
+
+
+                   <div class="form-group col-md-6">
+                     <label for="formGroupExampleInput"><b>14. Have you in the past two years or are you currently taking any
+                       medications on an ongoing basis?</b></label>
+                     <select class="form-control" name="medication" id="medication" Required>
+                       <option disabled>Please Select</option>
+                       <option></option>
+                       <option>Yes</option>
+                       <option>No</option>
+                     </select>
+                   </div>
+
+                   <div id="yes-medication" style="display:none;" class="form-group col-md-6">
+                     <label for="specify-medication"><b>14.a)</b> Please specify what medication(s) you are took/are currently taking:</label>
+                     <input class="form-control" type="text" name="specify-medication" placeholder="Enter medication"/>
+                     <br>
+                     <input type="button" id="more_fields" onclick="add_fields5();" value="Add another" class="btn btn-sm btn-info col-md-3"/>
+                     <br>
+                     <br>
+                       <div id="meds">
+                                <div>
+                                 <div class='label'></div>
+                                 <div class="content">
+                                 </div>
+                                </div>
+                             </div>
+                   </div>
+
+                   <div class="form-group col-md-6">
+                     <label for="formGroupExampleInput"><b>15. Is there a history of any particular illnesses in your family,
+                       such as diabetes, heart conditions, or genetic disorders?</b></label>
+                     <select class="form-control" name="genetic-d" id="genetic-d" Required>
+                       <option disabled>Please Select</option>
+                       <option></option>
+                       <option>Yes</option>
+                       <option>No</option>
+                     </select>
+                   </div>
+
+                   <div id="yes-genetic-d" style="display:none;" class="form-group col-md-6">
+                     <label for="specify-disorder"><b>15.a)</b> Please specify any histories you believe to be relevant:</label>
+                     <input class="form-control" type="text" name="specify-disorder" placeholder="Enter a history"/>
+                     <br>
+                     <input type="button" id="more_fields" onclick="add_fields6();" value="Add another" class="btn btn-sm btn-info col-md-3"/>
+                     <br>
+                     <br>
+                       <div id="history">
+                                <div>
+                                 <div class='label'></div>
+                                 <div class="content">
+                                 </div>
+                                </div>
+                             </div>
+                   </div>
+
+                   <div class="form-group col-md-12">
+                     <h2>Estate Planning</h2>
+                   </div>
+
+                   <br>
+
+                   <div class="form-group col-md-6">
+                     <label for="formGroupExampleInput"><b>1.</b> Do you have a will?</label>
+                     <select class="form-control" name="will" id="will" Required>
+                       <option disabled>Please Select</option>
+                       <option></option>
+                       <option>Yes</option>
+                       <option>No</option>
+                     </select>
+                   </div>
+
+                   <div id="yes-will" style="display:none;" class="form-group col-md-6">
+                     <label for="will-date"><b>1.a)</b> When was it last reviewed?</label>
+                     <input type="Date" class="form-control" id="will-date" placeholder="Select date"/>
+                     <label for="formGroupExampleInput"><b>1.b)</b> Have your circumstances changed since it was last reviewed?</label>
+                     <select class="form-control">
+                       <option disabled>Please select</option>
+                       <option></option>
+                       <option>Yes</option>
+                       <option>No</option>
+                     </select>
+                   </div>
+
+                     <div class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>2.</b> Have you executed an Enduring Power of Attorney?</label>
+                       <select class="form-control">
+                         <option disabled>Please select</option>
+                         <option></option>
+                         <option>Yes</option>
+                         <option>No</option>
+                       </select>
+                     </div>
+
+                     <div class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>3.</b> Do you have a funeral plan?</label>
+                       <select class="form-control" Required>
+                         <option disabled>Please select</option>
+                         <option></option>
+                         <option>Yes</option>
+                         <option>No</option>
+                       </select>
+                     </div>
+
+                     <div class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>4.</b> Have you been married before?</label>
+                       <select class="form-control" name="marriage" id="marriage" Required>
+                         <option disabled>Please Select</option>
+                         <option></option>
+                         <option>Yes</option>
+                         <option>No</option>
+                       </select>
+                     </div>
+
+                     <div id="yes-marriage" style="display:none;" class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>4)a.</b> Do you have any children from previous marriages/relationships?</label>
+                       <select class="form-control">
+                         <option disabled>Please select</option>
+                         <option></option>
+                         <option>Yes</option>
+                         <option>No</option>
+                       </select>
+                     </div>
+
+                     <div class="form-group col-md-6">
+                       <label for="formGroupExampleInput"><b>5.</b> Are there any special estate planning issues or requirements,
+                         such as special bequests, testamentary trusts or substantial
+                         inheritances, that your financial adviser should be aware of?</label>
+                       <select class="form-control" name="estate-issues" id="estate-issues" Required>
+                         <option disabled>Please Select</option>
+                         <option></option>
+                         <option>Yes</option>
+                         <option>No</option>
+                       </select>
+                     </div>
+
+                     <div id="yes-estate-issues" style="display:none;" class="form-group col-md-6">
+                       <label for="estate-list"><b>5.a)</b> Please specify any estate planning issues you have:</label>
+                       <input class="form-control" type="text" name="estate-list" placeholder="Specify your estate planning-related issue(s)"/>
+                     </div>
+
+                     <div class="col-xs-12">
+                       <button class="btn btn-danger col-md-2 col-md-offset-5"><span class="glyphicon glyphicon-trash"></span> Cancel</button>
+                       <button class="btn btn-success col-md-2 col-md-offset-"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+                     </div>
+
+               </form>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+
+                         <script>
+                         function add_fields3() {
+                           var objTo = document.getElementById('pastime')
+                           var divtest = document.createElement("div");
+                           divtest.innerHTML = '<div class="label">' + ':</div><div class="content"><span><span><input type="text" style="width:525px;" class="form-control" placeholder="Enter hazard pastime activity" required/></span></div>';
+
+                           objTo.appendChild(divtest) // if 'add another' button is selected, another field will be shown
+                           }
+                         </script>
+
+                         <script>
+                         function add_fields4() {
+                           var objTo = document.getElementById('issues')
+                           var divtest = document.createElement("div");
+                           divtest.innerHTML = '<div class="label">' + ':</div><div class="content"><span><span><input type="text" style="width:525px;" name="issues" class="form-control" placeholder="Enter health issue" required/></span></div>';
+
+                           objTo.appendChild(divtest) // if 'add another' button is selected, another field will be shown
+                           }
+                         </script>
+
+                         <script>
+                         function add_fields5() {
+                           var objTo = document.getElementById('meds')
+                           var divtest = document.createElement("div");
+                           divtest.innerHTML = '<div class="label">' + ':</div><div class="content"><span><span><input type="text" style="width:525px;" class="form-control" placeholder="Enter medication" required/></span></div>';
+
+                           objTo.appendChild(divtest) // if 'add another' button is selected, another field will be shown
+                           }
+                         </script>
+
+                         <script>
+                         function add_fields6() {
+                           var objTo = document.getElementById('history')
+                           var divtest = document.createElement("div");
+                           divtest.innerHTML = '<div class="label">' + ':</div><div class="content"><span><span><input type="text" style="width:525px;" class="form-control" placeholder="Enter a history" required/></span></div>';
+
+                           objTo.appendChild(divtest) // if 'add another' button is selected, another field will be shown
+                           }
+                         </script>
+
+                         <script> // Attitude to insurance - question 5
+                         $('#income-stream').on('change',function(){
+                             if( $(this).val()==="Yes"){
+                             $("#yes-stream").show() // shows fields about income stream amount and time if 'yes' is selected
+                             }
+                             else{
+                             $("#yes-stream").hide() // hides fields about income stream amount and time if 'no' is selected
+                             }
+                         });
+                         </script>
+
+                         <script> // Attitude to insurance - question 7
+                         $('#life-wo-income').on('change',function(){
+                             if( $(this).val()==="Other"){
+                             $("#other-wo-income").show() // shows field to specify time without income that hasn't been shown on pre-selected menu
+                             }
+                             else{
+                             $("#other-wo-income").hide() // hides field to specify time without income
+                           }
+                         });
+                         </script>
+
+                         <script> // Attitude to insurance - question 8
+                         $('#specific-request').on('change',function(){
+                             if( $(this).val()==="Yes"){
+                             $("#request-yes").show() // shows field to specify requests
+                             }
+                             else{
+                             $("#request-yes").hide() // hides field to specify requests
+                             }
+                         });
+                         </script>
+
+                         <script> // Attitude to insurance - question 12
+                         $('#hazard-pastime').on('change',function(){
+                             if( $(this).val()==="Yes"){
+                             $("#yes-pastime").show() // shows fields to specify pastime(s) if 'yes' is selected
+                             }
+                             else{
+                             $("#yes-pastime").hide() // hides fields to specify pastime(s)
+                             }
+                         });
+                         </script>
+
+                         <script>
+                         $('#health-issues').on('change',function(){ // Attitude to insurance - question 13
+                             if( $(this).val()==="Yes"){
+                             $("#yes-issues").show() // shows fields to specify health issue(s) if 'yes' is selected
+                             }
+                             else{
+                             $("#yes-issues").hide() // hides fields to specify health issue(s)
+                             }
+                         });
+                         </script>
+
+                         <script> // Attitude to insurance - question 14
+                         $('#medication').on('change',function(){
+                             if( $(this).val()==="Yes"){
+                             $("#yes-medication").show() // shows fields to specify medication
+                             }
+                             else{
+                             $("#yes-medication").hide() // hides fields that allow user to specify medication
+                             }
+                         });
+                         </script>
+
+                         <script> // Attitude to insurance - question 15
+                         $('#genetic-d').on('change',function(){
+                             if( $(this).val()==="Yes"){
+                             $("#yes-genetic-d").show() // shows fields to enter family history
+                             }
+                             else{
+                             $("#yes-genetic-d").hide() // hides fields about family history
+                             }
+                         });
+                         </script>
+
+                         <script> // Estate planning - question 1
+                         $('#will').on('change',function(){
+                             if( $(this).val()==="Yes"){ // shows field if they have a will
+                             $("#yes-will").show()
+                             }
+                             else{
+                             $("#yes-will").hide() // doesn't show field if they don't click 'yes'
+                             }
+                         });
+                         </script>
+
+                         <script> // Estate planning - question 4
+                         $('#marriage').on('change',function(){ // shows field if married
+                             if( $(this).val()==="Yes"){
+                             $("#yes-marriage").show()
+                             }
+                             else{
+                             $("#yes-marriage").hide() // hides field if not married
+                             }
+                         });
+                         </script>
+
+                         <script> // Estate planning - question 4
+                         $('#estate-issues').on('change',function(){ // shows field if married
+                             if( $(this).val()==="Yes"){
+                             $("#yes-estate-issues").show()
+                             }
+                             else{
+                             $("#yes-estate-issues").hide() // hides field if not married
+                             }
+                         });
+                         </script>
+
+        <div class="col-lg-6">
+       <div class="panel panel-default">
+         <div class="panel-heading" role="tab" id="headingTwo">
+           <h4 class="panel-title">
+             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <h1 class="log-In-Title">Partner <small>two</small></h1>
+             </a>
+           </h4>
+         </div>
+         <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+           <div class="panel-body">
+             <form>
+                   <h3><i>2. Attitude to insurance</i></h3>
+                   <p><b>In the event of an untimely death, accident or serious illness:</b></p>
+
+                   <br>
+
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>1.</b> Is your family able to live without financial burden in the event
+              that you should die?</label>
+            <select class="form-control" name="financial-burden">
+              <option>Please Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>2.</b> Do you have an alternative source of income in the event
+              of serious illness or disability?</label>
+            <select class="form-control">
+              <option>Please Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>3.</b> Would you prefer to be debt free?</label>
+            <select class="form-control">
+              <option>Please Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>4.</b> Are you prepared to sell your assets (excluding your family
+              home and contents) into an income stream to meet the ongoing
+              living costs of your family?</label>
+            <select class="form-control">
+              <option>Please Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>5.</b> Do you wish to provide an ongoing income stream to your
+              dependants in the event of death.</label>
+            <select class="form-control" name="income-stream2" id="income-stream2">
+              <option>Please Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div id="yes-stream2" style="display:none;" class="form-group col-md-6">
+            <label for="specify-amount2"><b>5.a)</b> Please state the preferred amount (after tax).</label>
+            <input class="form-control" type="number2" name="specify-amount2" min=0 step=1 placeholder="Enter whole GBP (£)"/>
+            <label for="specify-amount2">5.b) For how long?</label>
+            <input class="form-control" type="number2" name="specify-amount2" min=0 step=1 placeholder="Enter number of years"/>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>6.</b> Are you prepared to sell your assets (excluding your family
+              home and contents) into an income stream to meet the ongoing
+              living costs of your family?</label>
+            <select class="form-control">
+              <option>Please Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>7.</b> How long could you continue to live without earning an income?</label>
+            <select class="form-control" name="life-wo-income2" id="life-wo-income2">
+              <option>Please Select</option>
+              <option>Up to 30 days</option>
+              <option>Up to 60 days</option>
+              <option>Up 90 days</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div id="other-wo-income2" style="display:none;" class="form-group col-md-6">
+            <label for="other-time-wo-income"><b>7.a)</b> Please specify for how long.</label>
+            <input class="form-control" type="text" name="other-time-wo-income2" placeholder="Enter amount of time"/>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>8.</b> Do you have any specific requests?</label>
+            <select class="form-control" name="specific-request2" id="specific-request2">
+              <option>Please Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div id="request-yes2" style="display:none;" class="form-group col-md-6">
+            <label for="specify-yes-request"><b>8.a)</b> Please explain them:</label>
+            <input class="form-control" type="text" name="specify-yes-request" placeholder="Enter your specific requests"/>
+          </div>
+
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput"><b>9.</b> How would you rate your health?</label>
+          <select class="form-control">
+            <option>Please Select</option>
+            <option>Good</option>
+            <option>Fair</option>
+            <option>Poor</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput"><b>10.</b> Are you a smoker?</label>
+          <select class="form-control">
+            <option>Please Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput"><b>11.</b> Do you have private health insurance?</label>
+          <select class="form-control">
+            <option>Please Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput"><b>12.</b> Are you involved in any hazardous pastimes,
+        (e.g. sky diving, rock climbing, BASE jumping, etc?)</label>
+          <select class="form-control" name="hazard-pastime" id="hazard-pastime2">
+            <option>Please Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div id="yes-pastime2" style="display:none;" class="form-group col-md-6">
+          <label for="pastime-hazard2"><b>12.a)</b> Specify what pastimes you engage in:</label>
+          <input class="form-control" type="text" name="pastime-hazard2" placeholder="Enter hazard pastime activity"/>
+          <br>
+          <input type="button" id="more_fields" onclick="add_fields12();" value="Add another" class="btn btn-sm btn-info col-md-6"/>
+          <br>
+          <br>
+            <div id="pastime2">
+                     <div>
+                      <div class='label'></div>
+                      <div class="content">
+                      </div>
+                     </div>
+                  </div>
+        </div>
+
+        <br>
+
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput"><b>13. Are you aware of any health issues that might affect current
+            or future financial advice and insurance considerations?</b></label>
+          <select class="form-control" name="health-issues2" id="health-issues2">
+            <option>Please Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div id="yes-issues2" style="display:none;" class="form-group col-md-6">
+          <label for="specify-health-issues"><b>13.a)</b> Please state the health issues that you are aware of:</label>
+          <input class="form-control" type="text" name="specify-health-issues2" placeholder="Enter health issue"/>
+          <br>
+          <input type="button" id="more_fields" onclick="add_fields11();" value="Add another" class="btn btn-sm btn-info col-md-6"/>
+          <br>
+          <br>
+            <div id="issues2">
+                     <div>
+                      <div class='label'></div>
+                      <div class="content">
+                      </div>
+                     </div>
+                  </div>
+        </div>
+
+
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput"><b>14. Have you in the past two years or are you currently taking any
+            medications on an ongoing basis?</b></label>
+          <select class="form-control" name="medication" id="medication2">
+            <option>Please Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div id="yes-medication2" style="display:none;" class="form-group col-md-6">
+          <label for="specify-medication"><b>14.a)</b> Please specify what medication(s) you are took/are currently taking:</label>
+          <input class="form-control" type="text" name="specify-medication2" placeholder="Enter medication"/>
+          <br>
+          <input type="button" id="more_fields" onclick="add_fields10();" value="Add another" class="btn btn-sm btn-info col-md-6"/>
+          <br>
+          <br>
+            <div id="meds2">
+                     <div>
+                      <div class='label'></div>
+                      <div class="content">
+                      </div>
+                     </div>
+                  </div>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput"><b>15. Is there a history of any particular illnesses in your family,
+            such as diabetes, heart conditions, or genetic disorders?</b></label>
+          <select class="form-control" name="genetic-d2" id="genetic-d2">
+            <option>Please Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div id="yes-genetic-d2" style="display:none;" class="form-group col-md-6">
+          <label for="specify-disorder"><b>15.a)</b> Please specify any histories you believe to be relevant:</label>
+          <input class="form-control" type="text" name="specify-disorder2" placeholder="Enter a history"/>
+          <br>
+          <input type="button" id="more_fields" onclick="add_fields7();" value="Add another" class="btn btn-sm btn-info col-md-6"/>
+          <br>
+          <br>
+            <div id="history2">
+                     <div>
+                      <div class='label'></div>
+                      <div class="content">
+                      </div>
+                     </div>
+                  </div>
+        </div>
+
+        <div class="form-group col-md-12">
+          <h2>Estate Planning</h2>
+        </div>
+
+        <br>
+
+        <div class="form-group col-md-6">
+          <label for="formGroupExampleInput"><b>1.</b> Do you have a will?</label>
+          <select class="form-control" name="will2" id="will2">
+            <option>Please Select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div id="yes-will2" style="display:none;" class="form-group col-md-6">
+          <label for="will-date2"><b>1.a)</b> When was it last reviewed?</label>
+          <input type="Date" class="form-control" id="will-date2" placeholder="Select date"/>
+          <label for="formGroupExampleInput"><b>1.b)</b> Have your circumstances changed since it was last reviewed?</label>
+          <select class="form-control">
+            <option>Please select</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>2.</b> Have you executed an Enduring Power of Attorney?</label>
+            <select class="form-control">
+              <option>Please select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>3.</b> Do you have a funeral plan?</label>
+            <select class="form-control">
+              <option>Please select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>4.</b> Have you been married before?</label>
+            <select class="form-control" name="marriage2" id="marriage2">
+              <option>Please Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div id="yes-marriage2" style="display:none;" class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>4)a.</b> Do you have any children from previous marriages/relationships?</label>
+            <select class="form-control">
+              <option>Please select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-6">
+            <label for="formGroupExampleInput"><b>5.</b> Are there any special estate planning issues or requirements,
+              such as special bequests, testamentary trusts or substantial
+              inheritances, that your financial adviser should be aware of?</label>
+            <select class="form-control" name="estate-issues2" id="estate-issues2">
+              <option>Please Select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+
+          <div id="yes-estate-issues2" style="display:none;" class="form-group col-md-6">
+            <label for="estate-list2"><b>5.a)</b> Please specify any estate planning issues you have:</label>
+            <input class="form-control" type="text" name="estate-list2" placeholder="Specify your estate planning-related issue(s)"/>
+          </div>
+
+          <div class="col-xs-12">
+            <button class="btn btn-danger col-md-2 col-md-offset-5"><span class="glyphicon glyphicon-trash"></span> Cancel</button>
+            <button class="btn btn-success col-md-2 col-md-offset-"><span class="glyphicon glyphicon-floppy-disk"></span> Save</button>
+          </div>
+                  </form>
+                 </div>
+               </div>
+             </div>
+        	</div>
+        </div>
+
+          </div>
+        </div>
+
+  <script>
+  $(document).ready(function() {
+      $("#add_row_2").on("click", function() {
+          // Dynamic Rows Code
+
+          // Get max row id and set new id
+          var newid = 0;
+          $.each($("#tab_logic_2 tr"), function() {
+              if (parseInt($(this).data("id")) > newid) {
+                  newid = parseInt($(this).data("id"));
+              }
+          });
+          newid++;
+
+          var tr = $("<tr></tr>", {
+              id: "addr"+newid,
+              "data-id": newid
+          });
+
+          // loop through each td and create new elements with name of newid
+          $.each($("#tab_logic_2 tbody tr:nth(0) td"), function() {
+              var cur_td = $(this);
+
+              var children = cur_td.children();
+
+              // add new td and element if it has a nane
+              if ($(this).data("name") != undefined) {
+                  var td = $("<td></td>", {
+                      "data-name": $(cur_td).data("name")
+                  });
+
+                  var c = $(cur_td).find($(children[0]).prop('tagName')).clone().val("");
+                  c.attr("name", $(cur_td).data("name") + newid);
+                  c.appendTo($(td));
+                  td.appendTo($(tr));
+              } else {
+                  var td = $("<td></td>", {
+                      'text': $('#tab_logic_2 tr').length
+                  }).appendTo($(tr));
+              }
+          });
+
+          // add delete button and td
+          /*
+          $("<td></td>").append(
+              $("<button class='btn btn-danger glyphicon glyphicon-remove row-remove'></button>")
+                  .click(function() {
+                      $(this).closest("tr").remove();
+                  })
+          ).appendTo($(tr));
+          */
+
+          // add the new row
+          $(tr).appendTo($('#tab_logic_2'));
+
+          $(tr).find("td button.row-remove").on("click", function() {
+               $(this).closest("tr").remove();
+          });
+  });
+
+
+
+
+      // Sortable Code
+      var fixHelperModified = function(e, tr) {
+          var $originals = tr.children();
+          var $helper = tr.clone();
+
+          $helper.children().each(function(index) {
+              $(this).width($originals.eq(index).width())
+          });
+
+          return $helper;
+      };
+
+      $(".table-sortable tbody").sortable({
+          helper: fixHelperModified
+      }).disableSelection();
+
+      $(".table-sortable thead").disableSelection();
+
+
+
+      $("#add_row_2").trigger("click");
+  });
+    </script>
+
+    <script>
+    function add_fields12() {
+      var objTo = document.getElementById('pastime2')
+      var divtest = document.createElement("div");
+      divtest.innerHTML = '<div class="label">' + ':</div><div class="content"><span><span><input type="text" style="width:232px;" class="form-control" placeholder="Enter hazard pastime activity" required/></span></div>';
+
+      objTo.appendChild(divtest) // if 'add another' button is selected, another field will be shown
+      }
+    </script>
+
+    <script>
+    function add_fields11() {
+      var objTo = document.getElementById('issues2')
+      var divtest = document.createElement("div");
+      divtest.innerHTML = '<div class="label">' + ':</div><div class="content"><span><span><input type="text" style="width:525px;" name="issues" class="form-control" placeholder="Enter health issue" required/></span></div>';
+
+      objTo.appendChild(divtest) // if 'add another' button is selected, another field will be shown
+      }
+    </script>
+
+    <script>
+    function add_fields10() {
+      var objTo = document.getElementById('meds2')
+      var divtest = document.createElement("div");
+      divtest.innerHTML = '<div class="label">' + ':</div><div class="content"><span><span><input type="text" style="width:525px;" class="form-control" placeholder="Enter medication" required/></span></div>';
+
+      objTo.appendChild(divtest) // if 'add another' button is selected, another field will be shown
+      }
+    </script>
+
+    <script>
+    function add_fields7() {
+      var objTo = document.getElementById('history2')
+      var divtest = document.createElement("div");
+      divtest.innerHTML = '<div class="label">' + ':</div><div class="content"><span><span><input type="text" style="width:525px;" class="form-control" placeholder="Enter a history" required/></span></div>';
+
+      objTo.appendChild(divtest) // if 'add another' button is selected, another field will be shown
+      }
+    </script>
+
+    <script>
+    function add_fields8() {
+      var objTo = document.getElementById('insurance_list8')
+      var divtest = document.createElement("div");
+      divtest.innerHTML = '<div class="label"> ' + ':</div><div class="content"><span>Personal Insurance Company <input type="text" style="width:232px;" name="insComp" class="form-control" placeholder="Insurance Company" required/></span><span>Type of Policy <input type="text" style="width:200px;" name="polType" placeholder="e.g. PPI" class="form-control" required/></span><span>Policy no. <input type="text" style="width:200px;" name="polNum" class="form-control" pattern="[0-9]*" maxlength="10"  placeholder="Enter 10 digits" required/></span><span>Owner: <input type="text" style="width:200px;" name="owner" placeholder="e.g. You, a relative, super fund, other" class="form-control" required/></span><span>Sum insured <input type="number" style="width:200px;" min="0" step="1" name="sumIns" placeholder="Enter whole GBP (£)" class="form-control" required/></span><span>Beneficiary <input type="text" style="width:200px;" name="benif" class="form-control" placeholder="Primary beneficiary" required/></span><span>Annual premium <input type="number" style="width:200px;" min="0" step="1" name="annPrem" placeholder="Enter whole GBP (£)" class="form-control" required/></span><br></div>';
+
+      objTo.appendChild(divtest)
+      }
+    </script>
+
+    <script>
+    function add_fields9() {
+      var objTo = document.getElementById('insurance_list9')
+      var divtest = document.createElement("div");
+      divtest.innerHTML = '<div class="label">' + ':</div><div class="content"><span>General Insurance Company <input type="text" style="width:232px;" name="insComp" class="form-control" placeholder="Insurance Company" required/></span><span>Type of Policy <input type="text" style="width:200px;" name="polType" placeholder="e.g. Buildings insurance" class="form-control" required/></span><span>Policy no. <input type="text" style="width:200px;" name="polNum" class="form-control" pattern="[0-9]*" maxlength="10"  placeholder="Enter 10 digits" required/></span><span>Owner: <input type="text" style="width:200px;" name="owner" placeholder="e.g. You, a relative, super fund, other" class="form-control" required/></span><span>Sum insured <input type="number" style="width:200px;" min="0" step="1" name="sumIns" placeholder="Enter whole GBP (£)" class="form-control" required/></span><span>Beneficiary <input type="text" style="width:200px;" name="benif" class="form-control" placeholder="Primary beneficiary" required/></span><span>Annual premium <input type="number" style="width:200px;" min="0" step="1" name="annPrem" placeholder="Enter whole GBP (£)" class="form-control" required/></span><br></div>';
+
+      objTo.appendChild(divtest)
+      }
+    </script>
+
+    <script> // Attitude to insurance - question 5
+    $('#income-stream').on('change',function(){
+        if( $(this).val()==="Yes"){
+        $("#yes-stream").show() // shows fields about income stream amount and time if 'yes' is selected
+        }
+        else{
+        $("#yes-stream").hide() // hides fields about income stream amount and time if 'no' is selected
+        }
+    });
+    </script>
+
+    <script> // Attitude to insurance - question 5
+    $('#income-stream2').on('change',function(){
+        if( $(this).val()==="Yes"){
+        $("#yes-stream2").show() // shows fields about income stream amount and time if 'yes' is selected
+        }
+        else{
+        $("#yes-stream2").hide() // hides fields about income stream amount and time if 'no' is selected
+        }
+    });
+    </script>
+
+    <script> // Attitude to insurance - question 7
+    $('#life-wo-income').on('change',function(){
+        if( $(this).val()==="Other"){
+        $("#other-wo-income").show() // shows field to specify time without income that hasn't been shown on pre-selected menu
+        }
+        else{
+        $("#other-wo-income").hide() // hides field to specify time without income
+      }
+    });
+    </script>
+
+    <script> // Attitude to insurance - question 7
+    $('#life-wo-income2').on('change',function(){
+        if( $(this).val()==="Other"){
+        $("#other-wo-income2").show() // shows field to specify time without income that hasn't been shown on pre-selected menu
+        }
+        else{
+        $("#other-wo-income2").hide() // hides field to specify time without income
+      }
+    });
+    </script>
+
+    <script> // Attitude to insurance - question 8
+    $('#specific-request').on('change',function(){
+        if( $(this).val()==="Yes"){
+        $("#request-yes").show() // shows field to specify requests
+        }
+        else{
+        $("#request-yes").hide() // hides field to specify requests
+        }
+    });
+    </script>
+
+    <script> // Attitude to insurance - question 8
+    $('#specific-request2').on('change',function(){
+        if( $(this).val()==="Yes"){
+        $("#request-yes2").show() // shows field to specify requests
+        }
+        else{
+        $("#request-yes2").hide() // hides field to specify requests
+        }
+    });
+    </script>
+
+    <script> // Attitude to insurance - question 12
+    $('#hazard-pastime').on('change',function(){
+        if( $(this).val()==="Yes"){
+        $("#yes-pastime").show() // shows fields to specify pastime(s) if 'yes' is selected
+        }
+        else{
+        $("#yes-pastime").hide() // hides fields to specify pastime(s)
+        }
+    });
+    </script>
+
+    <script> // Attitude to insurance - question 12
+    $('#hazard-pastime2').on('change',function(){
+        if( $(this).val()==="Yes"){
+        $("#yes-pastime2").show() // shows fields to specify pastime(s) if 'yes' is selected
+        }
+        else{
+        $("#yes-pastime2").hide() // hides fields to specify pastime(s)
+        }
+    });
+    </script>
+
+    <script>
+    $('#health-issues').on('change',function(){ // Attitude to insurance - question 13
+        if( $(this).val()==="Yes"){
+        $("#yes-issues").show() // shows fields to specify health issue(s) if 'yes' is selected
+        }
+        else{
+        $("#yes-issues").hide() // hides fields to specify health issue(s)
+        }
+    });
+    </script>
+
+    <script>
+    $('#health-issues2').on('change',function(){ // Attitude to insurance - question 13
+        if( $(this).val()==="Yes"){
+        $("#yes-issues2").show() // shows fields to specify health issue(s) if 'yes' is selected
+        }
+        else{
+        $("#yes-issues2").hide() // hides fields to specify health issue(s)
+        }
+    });
+    </script>
+
+    <script> // Attitude to insurance - question 14
+    $('#medication').on('change',function(){
+        if( $(this).val()==="Yes"){
+        $("#yes-medication").show() // shows fields to specify medication
+        }
+        else{
+        $("#yes-medication").hide() // hides fields that allow user to specify medication
+        }
+    });
+    </script>
+
+    <script> // Attitude to insurance - question 14
+    $('#medication2').on('change',function(){
+        if( $(this).val()==="Yes"){
+        $("#yes-medication2").show() // shows fields to specify medication
+        }
+        else{
+        $("#yes-medication2").hide() // hides fields that allow user to specify medication
+        }
+    });
+    </script>
+
+    <script> // Attitude to insurance - question 15
+    $('#genetic-d').on('change',function(){
+        if( $(this).val()==="Yes"){
+        $("#yes-genetic-d").show() // shows fields to enter family history
+        }
+        else{
+        $("#yes-genetic-d").hide() // hides fields about family history
+        }
+    });
+    </script>
+
+    <script> // Attitude to insurance - question 15
+    $('#genetic-d2').on('change',function(){
+        if( $(this).val()==="Yes"){
+        $("#yes-genetic-d2").show() // shows fields to enter family history
+        }
+        else{
+        $("#yes-genetic-d2").hide() // hides fields about family history
+        }
+    });
+    </script>
+
+    <script> // Estate planning - question 1
+    $('#will').on('change',function(){
+        if( $(this).val()==="Yes"){ // shows field if they have a will
+        $("#yes-will").show()
+        }
+        else{
+        $("#yes-will").hide() // doesn't show field if they don't click 'yes'
+        }
+    });
+    </script>
+
+    <script> // Estate planning - question 1
+    $('#will2').on('change',function(){
+        if( $(this).val()==="Yes"){ // shows field if they have a will
+        $("#yes-will2").show()
+        }
+        else{
+        $("#yes-will2").hide() // doesn't show field if they don't click 'yes'
+        }
+    });
+    </script>
+
+    <script> // Estate planning - question 4
+    $('#marriage2').on('change',function(){ // shows field if married
+        if( $(this).val()==="Yes"){
+        $("#yes-marriage2").show()
+        }
+        else{
+        $("#yes-marriage2").hide() // hides field if not married
+        }
+    });
+    </script>
+
+    <script> // Estate planning - question 5
+    $('#estate-issues').on('change',function(){ // shows field if married
+        if( $(this).val()==="Yes"){
+        $("#yes-estate-issues").show()
+        }
+        else{
+        $("#yes-estate-issues").hide() // hides field if not married
+        }
+    });
+    </script>
+
+    <script> // Estate planning - question 5
+    $('#estate-issues2').on('change',function(){ // shows field if married
+        if( $(this).val()==="Yes"){
+        $("#yes-estate-issues2").show()
+        }
+        else{
+        $("#yes-estate-issues2").hide() // hides field if not married
+        }
+    });
+    </script>
+
+    <script>
+      new WOW().init();
+    </script>
+
+  {%endblock%}

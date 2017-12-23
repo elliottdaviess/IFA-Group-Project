@@ -1,0 +1,127 @@
+
+{%extends 'signin_Style.html'%}
+
+{% block mainBlock%}
+<!-- Title providing text in window tab -->
+  <title>Login</title>
+
+<!-- Container holding page content -->
+<div class="container animated slideInDown">
+<div class="row">
+
+<br>
+</div>
+   <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-login ">
+        <div class="panel-body bshadow">
+          <div class="row">
+            <div class="col-lg-12">
+<!-- Log in form -->
+              <form id="login-form" action="/Login"  method="POST" role="form" style="display: block;"> <!--onsubmit="return validateLogin()"-->
+                <h2>LOGIN</h2>
+                  <div class="form-group">
+                    <input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Username or Email" value="">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                  <label for="Account Type">Account Type</label>
+                    <select class="form-control" name="accounttype"id="accounttype">
+                      <option>Please Select</option>
+                      <option value="Client">Client</option>
+              	      <option value="IFA">IFA</option>
+                    </select>
+                  </div>
+                  <div class="col-xs-12 form-group pull-right">
+                        <input type="submit" name="login-submit" id="login-submit" onclick="loadcookie()" tabindex="4" class="form-control btn btn-login" value="Log In">
+                  </div>
+                  <center><h2 style="color:red">{{msg}}</h2><center>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- panel containing link to reg page -->
+        <div class="panel-heading bshadow">
+          <div class="row">
+            <div class="col-xs-12 tabs">
+              <a href="/Reg" id="register-form-link"><div class="register">Not registered? <b>Click here</b></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+
+
+    $( document ).ready(function() {
+      swal({
+        title: 'We use cookies!',
+        text: 'This is to improve the service we provide you.',
+        html: '<h3>By logging in you consent to this </h4>',
+        imageUrl: 'http://www.pngall.com/wp-content/uploads/2016/07/Cookie-Transparent.png',
+        imageWidth: 200,
+        imageHeight: 200,
+        timer: 2000
+      }).then(
+    function () {},
+    // handling the promise rejection
+    function (dismiss) {
+      if (dismiss === 'timer') {
+        console.log('I was closed by the timer')
+      }
+    }
+  )
+      });
+
+
+// function validateLogin() {
+//     var email = document.getElementById("email").value;
+//     var password = document.getElementById("password").value;
+//     if (email == "bryantas@cardiff.ac.uk" && password == "password") {
+// swal({   title: 'Credentials checked and correct',
+//          html: '<a class="btn btn-primary btn-lg" href="/clientLanding">Log in Securely</a> ',
+//            type: 'success',   showCancelButton: false, showConfirmButton: false,
+//
+//        });
+//
+//     } else if ((email == "ifa@demo.com" && password == "password")) {
+//       swal({   title: 'Credentials checked and correct',
+//                html: '<a class="btn btn-primary btn-lg" href="ifalanding.html">Log in Securely</a> ',
+//                  type: 'success',   showCancelButton: false, showConfirmButton: false,
+//
+//              });
+//     }
+//
+//
+//     else {
+//       swal(
+//   'Sorry about this',
+//   'Either your username or password was incorrect',
+//   'error'
+// );
+//     }
+// }
+
+function loadcookie(){
+  console.log("loadcookie")
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+  console.log(email);
+  console.log(password);
+  var d = new Date();
+  d.setTime(d.getTime() + (24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = "fiscuscookieEmail" + "=" + email + ";" + expires;
+  document.cookie = "fiscuscookiePassword" + "=" + password + ";" + expires;
+  }
+
+</script>
+  {%endblock%}

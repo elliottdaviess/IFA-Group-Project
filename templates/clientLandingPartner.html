@@ -1,0 +1,42 @@
+{%extends 'gen_style_partner.html'%}
+{% block mainBlock%}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
+<script>
+window.onload = function(){
+    if (annyang) {
+        var commands = {
+            'Open client': function() {
+              window.location.href = '/peopleClientPartner';
+            }
+        };
+
+        var commands1 = {
+            'Open tax': function() {
+              window.location.href = '/peopleClientPartner';
+            }
+        };
+
+        var commands2 = {
+            'Open dependents': function() {
+              window.location.href = '/peopleClientPartner';
+            }
+        };
+
+        annyang.addCommands(commands, commands1, commands2);
+        annyang.start();
+    }
+}
+</script>
+
+
+  <div class="container">
+    <h2 class="wow slideInLeft fontchange"> Welcome {{msg}}, This is your IFA Fact Finder portal.</h2>
+      <br>
+  <img class=" visible-md-3 col-md-3 img-responsive wow bounceInLeft" data-wow-duration="2.5s" src="/static/img/IFA.png">
+<div class="col-md-9 wow bounceInRight jumbotron bg-img"  data-wow-duration="2.5s ">
+      <h1>We just need some information</h1>
+      <p>So that your IFA can accuratly advise you, we will need you to fill in the forms found by following the navigation bar above.</p>
+      <p>Start with the 'People' tab and work your way along, providing as much information to your knowledge as you can.</p>
+    </div>
+  </div>
+{%endblock%}

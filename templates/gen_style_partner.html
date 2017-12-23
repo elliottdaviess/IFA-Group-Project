@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<head>
+  <!-- linked stylesheet and script for sweet alerts -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.1.0/sweetalert2.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.1.0/sweetalert2.js"></script>
+
+<!-- linked stylesheet for bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- linked script for jquery -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<!-- linked script for wow.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<!-- linked script for bootsrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+<!-- linked local stylesheet -->
+<link href="/static/css/style.css" rel="stylesheet">
+<!-- linked stylesheet for animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+<!--font awesome --->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<!-- linked tab Icon -->
+<link rel="shortcut icon" href="Website-Home.ico" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/1.1.0/annyang.min.js"></script>
+<script>
+window.onload = function(){
+    if (annyang) {
+        var commands = {
+            'Open': function() {
+              window.location.href = '/peopleClient';
+            }
+        };
+        annyang.addCommands(commands);
+        annyang.start();
+    }
+}
+</script>
+</head>
+<body >
+
+
+    <title>Home</title>
+    <nav class="navbar navbar-inverse bshadow wow slideInDown">
+      <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/clientLanding">Fiscus fact finder</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ><a href="/clientLanding"><Span class="glyphicon glyphicon-home"></span> Home <span class="sr-only">(current)</span></a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">People <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/peopleClientPartner">Client</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/peopleTaxStatusPartner">Tax Status</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/peopleOccupationsPartner">Occupation</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/peopleHealthPartner">Health</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/peopleDependantsPartner">Dependants</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Finances <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/financesIncomePartner">Income</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/financesExpenditurePartner">Expenditure</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/financesAssetsPartner">Assets</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/financesLiabilitiesPartner">Liability</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/financesAffordabilityPartner">Affordability</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Life Goals <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">...</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">...</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">...</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">...</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">...</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Advice areas <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">...</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">...</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">...</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">...</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">...</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cashflow <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">...</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">...</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">...</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">...</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">...</a></li>
+            </ul>
+          </li>
+          <li class="dropdown ">
+<li class="active"><a href="/clientStats"><Span class="glyphicon glyphicon-file"></span> Reports <span class="sr-only">(current)</span></a></li>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span> Account <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/clientProfile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/Login"><span class="glyphicon glyphicon-lock"></span> logout</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/newPassword"><span class="glyphicon glyphicon-lock"></span> Change password</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+
+         {% block mainBlock%} Page under construction. {%endblock%}
+
+
+
+      <script>
+                   new WOW().init();
+
+
+
+                   </script>
+                   <!--Start of Tawk.to Script-->
+                   <script type="text/javascript">
+                   var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                   (function(){
+                   var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                   s1.async=true;
+                   s1.src='https://embed.tawk.to/58400761a9a0346a5226066a/default';
+                   s1.charset='UTF-8';
+                   s1.setAttribute('crossorigin','*');
+                   s0.parentNode.insertBefore(s1,s0);
+                   })();
+                   </script>
+                   <!--End of Tawk.to Script-->

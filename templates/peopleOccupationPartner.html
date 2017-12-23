@@ -1,0 +1,316 @@
+{%extends 'gen_style_partner.html'%}
+{% block mainBlock%}
+    <div class="container">
+        <div class="row wow slideInLeft">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="col-lg-6 ">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                   <h2 class = "log-In-Title"><i>Partner One<i></h2>
+                            </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in bshadow" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+
+                                <form>
+                                    <div class="form-group col-md-5">
+                                        <label for="formGroupExampleInput2">Occupation Partner One</label>
+                                        <input type="text" class="form-control" id="formpartner1" placeholder="Occupation">
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <label for="formGroupExampleInput">Employment status</label>
+                                        <select class="form-control">
+                                        <option>Please Select</option>
+                                        <option>Part-time</option>
+                                        <option>Full-time</option>
+                                        <option>Self employed</option>
+                                        <option>Unemployed</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="formGroupExampleInput2">If self employed</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="sole proprietor, partnership or company?">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="formGroupExampleInput2">Employer</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Employer Name">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="formGroupExampleInput2">Date Joined Company</label>
+                                        <input type="text" class="form-control" id="join" placeholder="DD/MM/YYYY">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="formGroupExampleInput2">Ideal retirement age</label>
+                                        <input type="number" class="form-control" id="retire" placeholder="What age do you want to retire at?">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="formGroupExampleInput">Will you be leaving your current employment soon?</label>
+                                        <select class="form-control">
+                                        <option>Please Select</option>
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                      </select>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <label for="formGroupExampleInput2">If yes, what date will you finish?</label>
+                                        <input type="text" class="form-control" id="finish" placeholder="DD/MM/YYYY">
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <label for="formGroupExampleInput2">Retirement age</label>
+                                        <input type="number" class="form-control" id="expretire" placeholder="Retirement age">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="formGroupExampleInput2">What is the reason you're leaving?</label>
+                                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="e.g. retrenchment, resignation, retirement">
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <label for="formGroupExampleInput2">Do you intend to return to employment? If so, when?</label>
+                                        <input type="text" class="form-control" id="return" placeholder="DD/MM/YYYY">
+                                    </div>
+                                    <h3><i> Qualifications</i> </h3>
+                                    <div class="form-group col-md-6">
+                                        <label for="formGroupExampleInput2">GCSE's</label>
+                                        <input type="text" class="form-control" id="gcses" placeholder="GCSE's">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="formGroupExampleInput2">A level/BTEC</label>
+                                        <input type="text" class="form-control" id="alevels" placeholder="A levels/BTEC">
+                                    </div>
+                                    <div class="form-group col-md-9">
+                                        <label for="formGroupExampleInput2">Other</label>
+                                        <input type="text" class="form-control" id="other" placeholder="Other Qualifications">
+                                    </div>
+                                    <button class="btn btn-sm btn-danger col-md-2 col-md-offset-5">Cancel</button>
+                                    <button class="btn btn-sm btn-success col-md-2 col-md-offset-" onclick="validateOccupationpartnerone()" >Save</button>
+                                </form>
+</div>
+</div>
+</div>
+</div>
+                                <div class="row wow slideInLeft">
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="col-lg-6 ">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingTwo">
+                                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <h2 class = "log-In-Title"><i>Partner Two<i></h2>
+                                        </a>
+                                      </h4>
+                                                </div>
+                                                <div id="collapseTwo" class="panel-collapse collapse in bshadow" role="tabpanel" aria-labelledby="headingOne">
+                                                    <div class="panel-body">
+
+                                                        <form>
+                                                            <div class="form-group col-md-5">
+                                                                <label for="formGroupExampleInput2">Occupation</label>
+                                                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Occupation">
+                                                            </div>
+                                                            <div class="form-group col-md-5">
+                                                                <label for="formGroupExampleInput">Employment status</label>
+                                                                <select class="form-control">
+                                                                <option>Please Select</option>
+                                                                <option>Part-time</option>
+                                                                <option>Full-time</option>
+                                                                <option>Self employed</option>
+                                                                <option>Unemployed</option>
+                                                              </select>
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="formGroupExampleInput2">If self employed</label>
+                                                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="sole proprietor, partnership or company?">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="formGroupExampleInput2">Employer</label>
+                                                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Employer Name">
+                                                            </div>
+                                                            <div class="form-group col-md-4">
+                                                                <label for="formGroupExampleInput2">Date Joined Company</label>
+                                                                <input type="text" class="form-control" id="joindates" placeholder="DD/MM/YYYY">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="formGroupExampleInput2">Ideal retirement age</label>
+                                                                <input type="number" class="form-control" id="retireages" placeholder="What age do you want to retire at?">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="formGroupExampleInput">Will you be leaving your current employment soon?</label>
+                                                                <select class="form-control">
+                                                                <option>Please Select</option>
+                                                                <option>Yes</option>
+                                                                <option>No</option>
+                                                              </select>
+                                                            </div>
+                                                            <div class="form-group col-md-5">
+                                                                <label for="formGroupExampleInput2">If yes, what date will you finish?</label>
+                                                                <input type="text" class="form-control" id="finishdate" placeholder="DD/MM/YYYY">
+                                                            </div>
+                                                            <div class="form-group col-md-5">
+                                                                <label for="formGroupExampleInput2">Retirement age</label>
+                                                                <input type="number" class="form-control" id="expected" placeholder="Retirement age">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="formGroupExampleInput2">What is the reason you're leaving?</label>
+                                                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="e.g. retrenchment, resignation, retirement">
+                                                            </div>
+                                                            <div class="form-group col-md-9">
+                                                                <label for="formGroupExampleInput2">Do you intend to return to employment? If so, when?</label>
+                                                                <input type="text" class="form-control" id="returndate" placeholder="DD/MM/YYYY">
+                                                            </div>
+                                                            <h3><i> Qualifications</i> </h3>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="formGroupExampleInput2">GCSE's</label>
+                                                                <input type="text" class="form-control" id="gcses" placeholder="GCSE's">
+                                                            </div>
+                                                            <div class="form-group col-md-6">
+                                                                <label for="formGroupExampleInput2">A level/BTEC</label>
+                                                                <input type="text" class="form-control" id="alevels" placeholder="A levels/BTEC">
+                                                            </div>
+                                                            <div class="form-group col-md-9">
+                                                                <label for="formGroupExampleInput2">Other</label>
+                                                                <input type="text" class="form-control" id="other" placeholder="Other Qualifications">
+                                                            </div>
+                                                            <button class="btn btn-sm btn-danger col-md-2 col-md-offset-5">Cancel</button>
+                                                            <button class="btn btn-sm btn-success col-md-2 col-md-offset-" onclick="validateOccupationpartnertwo()" >Save</button>
+                                                        </form>
+
+                                <script>
+                                function validateOccupationpartnerone()
+                                {
+
+                                var joindate = document.getElementById('join').value;
+                                var finishdates = document.getElementById('finish').value;
+                                var returndates = document.getElementById('return').value;
+                                var retireage = document.getElementById('retire').value;
+                                var expectedretire = document.getElementById('expretire').value;
+
+                                var dates = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/
+                                var letters = /^[A-Za-z]+$/;
+                                var numbers = /^[0-9]+$/;
+
+                                if(joindate.match(dates) == null)
+
+                                  {
+
+                                  alert("Invalid data structure in 'Date Joined Company' for partner One");
+
+                                  return false;
+
+                                  }
+
+                                if(finishdates.match(dates) == null)
+
+                                    {
+
+                                    alert("Invalid data structure in 'If yes, what date will you finish?' for partner One");
+
+                                    return false;
+
+                                    }
+                                if(returndates.match(dates) == null)
+
+                                        {
+
+                                        alert("Invalid data structure in 'Do you intend to return to employment? If so, when?' for partner One");
+
+                                        return false;
+
+                                        }
+                                if(retireage.match(numbers) == null)
+
+                                          {
+
+                                          alert("Please enter your age in numbers, partner one");
+
+                                          return false;
+                                          }
+                                if(expectedretire.match(numbers) == null)
+
+                                          {
+
+                                          alert("Please enter your age in numbers");
+
+                                          return false;
+                                          }
+
+                                }
+
+
+
+
+                                </script>
+                                <script>
+                                function validateOccupationpartnertwo()
+                                {
+
+                                var joindate = document.getElementById('joindates').value;
+                                var finishdates = document.getElementById('finishdate').value;
+                                var returndates = document.getElementById('returndate').value;
+                                var retireage = document.getElementById('retireages').value;
+                                var expectedretire = document.getElementById('expected').value;
+
+                                var dates = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/
+                                var letters = /^[A-Za-z]+$/;
+                                var numbers = /^[0-9]+$/;
+
+                                if(joindate.match(dates) == null)
+
+                                  {
+
+                                  alert("You haven't followed the date structure in 'Date Joined Company'");
+
+                                  return false;
+
+                                  }
+
+                                if(finishdates.match(dates) == null)
+
+                                    {
+
+                                    alert("You haven't followed the date structure in 'If yes, what date will you finish?'");
+
+                                    return false;
+
+                                    }
+                                if(returndates.match(dates) == null)
+
+                                        {
+
+                                        alert("You haven't followed the date structure in 'Do you intend to return to employment? If so, when?'");
+
+                                        return false;
+
+                                        }
+                                if(retireage.match(numbers) == null)
+
+                                          {
+
+                                          alert("Please enter your age in numbers");
+
+                                          return false;
+                                          }
+                                if(expectedretire.match(numbers) == null)
+
+                                          {
+
+                                          alert("Please enter your age in numbers");
+
+                                          return false;
+                                          }
+
+                                }
+
+
+
+
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%endblock%}
